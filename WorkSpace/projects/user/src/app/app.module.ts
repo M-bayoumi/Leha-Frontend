@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { LoginComponent } from './components/login/login.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
@@ -39,13 +38,24 @@ import {
   MAT_DATE_LOCALE,
 } from '@angular/material/core';
 import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { AddHomeImageComponent } from './components/homeImages/add-home-image/add-home-image.component';
+import { AllHomeImagesComponent } from './components/homeImages/all-home-images/all-home-images.component';
+import { DeleteHomeImageComponent } from './components/homeImages/delete-home-image/delete-home-image.component';
+import { UpdateHomeImageComponent } from './components/homeImages/update-home-image/update-home-image.component';
+import { HomeImageDetailsComponent } from './components/homeImages/home-image-details/home-image-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RegisterComponent,
-    LoginComponent,
+    HomeComponent,
+    AddHomeImageComponent,
+    AllHomeImagesComponent,
+    DeleteHomeImageComponent,
+    UpdateHomeImageComponent,
+    HomeImageDetailsComponent
   ],
   imports: [
     BrowserModule,

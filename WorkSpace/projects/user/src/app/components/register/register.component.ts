@@ -7,11 +7,13 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { UserService } from '../../services/user/user.service';
-import { IResponse } from '../../models/iresponse';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { IUser } from '../../models/iuser';
+import { IAddAppUserCommand } from '../../models/AppUser/iadd-app-user-command';
+import { IResponse } from '../../models/iresponse';
+import { AppUserService } from '../../services/appUsers/app-user.service';
+import { RoleService } from '../../services/roles/role.service';
+import { IRole } from '../../models/Role/irole';
 
 @Component({
   selector: 'app-register',
@@ -21,39 +23,35 @@ import { IUser } from '../../models/iuser';
 export class RegisterComponent implements OnInit {
   userRegisterForm: FormGroup;
   response: IResponse = {} as IResponse;
-  userNames: string[] = [];
-  userEmails: string[] = [];
+  roles: IRole[] = [];
+
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
+    private appUserService: AppUserService,
+    private roleService: RoleService,
     private toaster: ToastrService,
     private router: Router
   ) {
     this.userRegisterForm = fb.group(
       {
-        firstName: [
-          '',
-          [Validators.required, Validators.pattern('[A-Za-z]{3,}')],
-        ],
-        lastName: [
+        fullName: [
           '',
           [Validators.required, Validators.pattern('[A-Za-z]{3,}')],
         ],
         userName: [
           '',
-          [
-            Validators.required,
-            Validators.pattern('[A-Za-z0-9]{3,}'),
-            this.existUserNameValidator(),
-          ],
+          [Validators.required, Validators.pattern('[A-Za-z0-9]{3,}')],
         ],
         email: [
           '',
           [
             Validators.required,
             Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
-            this.existEmailValidator(),
           ],
+        ],
+        phoneNumber: [
+          '',
+          [Validators.required, Validators.pattern('[0-9]{11}')],
         ],
         password: [
           '',
@@ -65,10 +63,11 @@ export class RegisterComponent implements OnInit {
           ],
         ],
         confirmPassword: ['', [Validators.required]],
-        phoneNumber: [
+        address: [
           '',
-          [Validators.required, Validators.pattern('[0-9]{11}')],
+          [Validators.required, Validators.pattern('[A-Za-z0-9]{3,}')],
         ],
+        role: ['', [Validators.required, Validators.pattern('[A-Za-z]{3,}')]],
       },
 
       { validators: this.passwordMatchValidator }
@@ -76,14 +75,13 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.GetAllUserNames();
-    this.GetAllEmails();
+    this.GetAllRoles();
   }
 
   submit() {
-    let userRegister: IUser = this.userRegisterForm.value;
+    let userRegister: IAddAppUserCommand = this.userRegisterForm.value;
 
-    this.userService.Register(userRegister).subscribe({
+    this.appUserService.Register(userRegister).subscribe({
       next: (v) => {
         this.response = v as IResponse;
         this.toaster.success('success', 'Register Success');
@@ -94,32 +92,6 @@ export class RegisterComponent implements OnInit {
       // },
       // complete: () => console.log('complete'),
     });
-  }
-
-  existEmailValidator(): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-      let emailVal: string = control.value;
-
-      if (emailVal.length == 0 && control.untouched) {
-        return null;
-      }
-      let validationError = { existEmail: true };
-      let foundEmail = this.userEmails.includes(emailVal);
-      return foundEmail ? validationError : null;
-    };
-  }
-
-  existUserNameValidator(): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-      let userNameVal: string = control.value;
-
-      if (userNameVal.length == 0 && control.untouched) {
-        return null;
-      }
-      let validationError = { existUserName: true };
-      let foundEmail = this.userNames.includes(userNameVal);
-      return foundEmail ? validationError : null;
-    };
   }
 
   passwordMatchValidator(form: FormGroup) {
@@ -133,33 +105,20 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  GetAllUserNames() {
-    this.userService.GetAllUserNames().subscribe({
+  GetAllRoles() {
+    this.roleService.GetAll().subscribe({
       next: (v) => {
-        this.response = v as IResponse;
-        this.userNames = this.response.data;
+        let response = v as IResponse;
+        console.log(response.data);
+        this.roles = response.data;
       },
       // error: (e) => console.log(e),
       // complete: () => console.log('complete'),
     });
   }
 
-  GetAllEmails() {
-    this.userService.GetAllEmails().subscribe({
-      next: (v) => {
-        this.response = v as IResponse;
-        this.userEmails = this.response.data;
-      },
-      // error: (e) => console.log(e),
-      // complete: () => console.log('complete'),
-    });
-  }
-
-  get firstName() {
-    return this.userRegisterForm.get('firstName');
-  }
-  get lastName() {
-    return this.userRegisterForm.get('lastName');
+  get fullName() {
+    return this.userRegisterForm.get('fullName');
   }
   get userName() {
     return this.userRegisterForm.get('userName');
@@ -170,12 +129,16 @@ export class RegisterComponent implements OnInit {
   get phoneNumber() {
     return this.userRegisterForm.get('phoneNumber');
   }
-
   get password() {
     return this.userRegisterForm.get('password');
   }
-
   get confirmPassword() {
     return this.userRegisterForm.get('confirmPassword');
+  }
+  get address() {
+    return this.userRegisterForm.get('address');
+  }
+  get role() {
+    return this.userRegisterForm.get('role');
   }
 }

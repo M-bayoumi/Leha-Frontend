@@ -2,26 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  // user: IUser = {} as IUser;
-
+export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private _activatedRoute: ActivatedRoute
-  ) {
-    this._activatedRoute.paramMap.subscribe((params) => {
-      this.ngOnInit();
-    });
-  }
+  ) {}
 
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void {}
 
   LogOut() {
     this.router.navigate(['/login']);

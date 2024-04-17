@@ -1,0 +1,36 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All HomeImages</h1>
+    <button class="add" (click)="Add()">Add HomeImage</button>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Image</th>
+          <th>Company</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let homeImage of homeImages; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>
+            <img [src]="homeImage.imageURL" alt="" />
+          </td>
+          <td>{{ homeImage.companyName }}</td>
+          <td>
+            <button class="details" (click)="Details(homeImage)">
+              Details
+            </button>
+            <button class="update" (click)="Update(homeImage)">Update</button>
+            <button class="delete" (click)="Delete(homeImage.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

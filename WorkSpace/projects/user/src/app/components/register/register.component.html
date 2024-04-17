@@ -2,45 +2,23 @@
   <h2>Register</h2>
   <form [formGroup]="userRegisterForm" (ngSubmit)="submit()">
     <div class="mb-3">
-      <label for="firstName" class="form-label">FirstName</label>
+      <label for="fullName" class="form-label">FullName</label>
       <input
         type="text"
-        formControlName="firstName"
+        formControlName="fullName"
         class="form-control"
-        id="firstName"
-        name="firstName"
-        [class.is-invalid]="firstName?.invalid && firstName?.touched"
-        [class.is-valid]="firstName?.valid && firstName?.touched"
+        id="fullName"
+        name="fullName"
+        [class.is-invalid]="fullName?.invalid && fullName?.touched"
+        [class.is-valid]="fullName?.valid && fullName?.touched"
       />
-      <div [hidden]="firstName?.valid || firstName?.untouched">
-        <small *ngIf="firstName?.errors?.['required']">
-          * FirstName is required.
+      <div [hidden]="fullName?.valid || fullName?.untouched">
+        <small *ngIf="fullName?.errors?.['required']">
+          * FullName is required.
         </small>
-        <small *ngIf="firstName?.errors?.['pattern']">
+        <small *ngIf="fullName?.errors?.['pattern']">
           * FirstName must be 3 letters at least,
-          <b>{{firstName?.errors?.['pattern'].actualValue}}</b> is not valid.
-        </small>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <label for="lastName" class="form-label">LastName</label>
-      <input
-        type="text"
-        formControlName="lastName"
-        class="form-control"
-        id="lastName"
-        name="lastName"
-        [class.is-invalid]="lastName?.invalid && lastName?.touched"
-        [class.is-valid]="lastName?.valid && lastName?.touched"
-      />
-      <div [hidden]="lastName?.valid || lastName?.untouched">
-        <small *ngIf="lastName?.errors?.['required']">
-          * LastName is required.
-        </small>
-        <small *ngIf="lastName?.errors?.['pattern']">
-          * LastName must be 3 letters at least,
-          <b>{{lastName?.errors?.['pattern'].actualValue}}</b> is not valid.
+          <b>{{fullName?.errors?.['pattern'].actualValue}}</b> is not valid.
         </small>
       </div>
     </div>
@@ -64,9 +42,6 @@
           * UserName must be 3 letters at least,
           <b>{{userName?.errors?.['pattern'].actualValue}}</b> is not valid.
         </small>
-        <small *ngIf="userName?.errors?.['existUserName']">
-          * UserName is already taken.
-        </small>
       </div>
     </div>
 
@@ -88,9 +63,6 @@
         <small *ngIf="email?.errors?.['pattern']">
           * Please provide a valid email address,
           <b>{{email?.errors?.['pattern'].actualValue}}</b> is not valid.
-        </small>
-        <small *ngIf="email?.errors?.['existEmail']">
-          * Email is already taken.
         </small>
       </div>
     </div>
@@ -162,6 +134,39 @@
       </div>
     </div>
 
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input
+        type="text"
+        formControlName="address"
+        class="form-control"
+        id="address"
+        name="address"
+        [class.is-invalid]="address?.invalid && address?.touched"
+        [class.is-valid]="address?.valid && address?.touched"
+      />
+      <div [hidden]="address?.valid || address?.untouched">
+        <small *ngIf="address?.errors?.['required']">
+          * Address is required.
+        </small>
+        <small *ngIf="address?.errors?.['pattern']">
+          * Address must be 3 letters at least,
+          <b>{{address?.errors?.['pattern'].actualValue}}</b> is not valid.
+        </small>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role">
+            <mat-option *ngFor="let role of roles" [value]="role?.name">
+              {{ role?.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
     <button [disabled]="userRegisterForm.invalid" type="submit" class="btn">
       Submit
     </button>
