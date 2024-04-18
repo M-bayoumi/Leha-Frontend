@@ -2,14 +2,31 @@
   <div class="top">
     <h1>All HomeImages</h1>
     <button class="add" (click)="Add()">Add HomeImage</button>
+    <div class="filter">
+      <h4>Company</h4>
+      <select #companyId (change)="FilterHomeImages(companyId)">
+        <option value="0">All</option>
+        <option
+          [value]="company.id"
+          *ngFor="let company of companies"
+        >
+          {{ company.name }}
+        </option>
+      </select>
+    </div>
   </div>
   <div class="tableContainer">
     <table>
       <thead>
         <tr>
           <th>#</th>
+          <th>Name</th>
+          <th>Slogan</th>
+          <th>Employees No</th>
           <th>Image</th>
-          <th>Company</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Link</th>
           <th>Actions</th>
         </tr>
       </thead>

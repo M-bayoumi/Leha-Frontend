@@ -1,0 +1,48 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Companies</h1>
+    <button class="add" (click)="Add()">Add Company</button>
+
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Slogan</th>
+          <th>Employees</th>
+          <th>Image</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Link</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let company of companies; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ company.name }}</td>
+          <td>{{ company.slogan }}</td>
+          <td>{{ company.employees }}</td>
+          <td>
+            <img [src]="company.image" alt="" />
+          </td>
+          <td>{{ company.email }}</td>
+          <td>{{ company.phone }}</td>
+          <td>{{ company.link }}</td>
+          <td>
+            <button class="details" (click)="Details(company)">
+              Details
+            </button>
+            <button class="update" (click)="Update(company)">Update</button>
+            <button class="delete" (click)="Delete(company.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

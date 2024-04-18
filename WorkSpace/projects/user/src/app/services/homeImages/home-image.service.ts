@@ -3,16 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class HomeImageService {
   constructor(private http: HttpClient) {}
 
   GetAll() {
     return this.http.get(`${environment.Api}/HomeImage/All`);
   }
-
+  GetAllByCompanyId(id: number) {
+    return this.http.get(`${environment.Api}/HomeImage/All/${id}`);
+  }
   Add(command: any) {
     return this.http.post(`${environment.Api}/HomeImage/Add`, command);
   }

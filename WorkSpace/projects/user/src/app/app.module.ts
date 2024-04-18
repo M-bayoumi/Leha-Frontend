@@ -44,6 +44,11 @@ import { AllHomeImagesComponent } from './components/homeImages/all-home-images/
 import { DeleteHomeImageComponent } from './components/homeImages/delete-home-image/delete-home-image.component';
 import { UpdateHomeImageComponent } from './components/homeImages/update-home-image/update-home-image.component';
 import { HomeImageDetailsComponent } from './components/homeImages/home-image-details/home-image-details.component';
+import { AllCompaniesComponent } from './components/companies/all-companies/all-companies.component';
+import { AddCompanyComponent } from './components/companies/add-company/add-company.component';
+import { UpdateCompanyComponent } from './components/companies/update-company/update-company.component';
+import { DeleteCompanyComponent } from './components/companies/delete-company/delete-company.component';
+import { CompanyDetailsComponent } from './components/companies/company-details/company-details.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +60,12 @@ import { HomeImageDetailsComponent } from './components/homeImages/home-image-de
     AllHomeImagesComponent,
     DeleteHomeImageComponent,
     UpdateHomeImageComponent,
-    HomeImageDetailsComponent
+    HomeImageDetailsComponent,
+    AllCompaniesComponent,
+    AddCompanyComponent,
+    UpdateCompanyComponent,
+    DeleteCompanyComponent,
+    CompanyDetailsComponent
   ],
   imports: [
     BrowserModule,
