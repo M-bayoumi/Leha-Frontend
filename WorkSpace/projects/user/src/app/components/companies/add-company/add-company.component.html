@@ -1,0 +1,172 @@
+<div class="main p-4">
+  <header class="d-flex justify-content-between align-items-center">
+    <h1 class="m-3">Add</h1>
+    <span mat-flat-button matDialogClose class="text-danger">
+      <mat-icon>X</mat-icon>
+    </span>
+  </header>
+  <form [formGroup]="form">
+    <div class="row mt-3">
+      <div class="mb-3">
+        <label for="nameAr" class="form-label">NameAr</label>
+        <input
+          type="text"
+          formControlName="nameAr"
+          class="form-control"
+          id="nameAr"
+          name="nameAr"
+          [class.is-invalid]="nameAr?.invalid && nameAr?.touched"
+          [class.is-valid]="nameAr?.valid && nameAr?.touched"
+        />
+        <div [hidden]="nameAr?.valid || nameAr?.untouched">
+          <small *ngIf="nameAr?.errors?.['required']">
+            * NameAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nameEn" class="form-label">NameEn</label>
+        <input
+          type="text"
+          formControlName="nameEn"
+          class="form-control"
+          id="nameEn"
+          name="nameEn"
+          [class.is-invalid]="nameEn?.invalid && nameEn?.touched"
+          [class.is-valid]="nameEn?.valid && nameEn?.touched"
+        />
+        <div [hidden]="nameEn?.valid || nameEn?.untouched">
+          <small *ngIf="nameEn?.errors?.['required']">
+            * NameEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="sloganAr" class="form-label">SloganAr</label>
+        <input
+          type="text"
+          formControlName="sloganAr"
+          class="form-control"
+          id="sloganAr"
+          name="sloganAr"
+          [class.is-invalid]="sloganAr?.invalid && sloganAr?.touched"
+          [class.is-valid]="sloganAr?.valid && sloganAr?.touched"
+        />
+        <div [hidden]="sloganAr?.valid || sloganAr?.untouched">
+          <small *ngIf="sloganAr?.errors?.['required']">
+            * SloganAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="sloganEn" class="form-label">SloganEn</label>
+        <input
+          type="text"
+          formControlName="sloganEn"
+          class="form-control"
+          id="sloganEn"
+          name="sloganEn"
+          [class.is-invalid]="sloganEn?.invalid && sloganEn?.touched"
+          [class.is-valid]="sloganEn?.valid && sloganEn?.touched"
+        />
+        <div [hidden]="sloganEn?.valid || sloganEn?.untouched">
+          <small *ngIf="sloganEn?.errors?.['required']">
+            * SloganEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="employees" class="form-label">Employees</label>
+        <input
+          type="number"
+          formControlName="employees"
+          class="form-control"
+          id="employees"
+          name="employees"
+          [class.is-invalid]="employees?.invalid && employees?.touched"
+          [class.is-valid]="employees?.valid && employees?.touched"
+        />
+        <div [hidden]="employees?.valid || employees?.untouched">
+          <small *ngIf="employees?.errors?.['required']">
+            * SloganEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          id="email"
+          name="email"
+          [class.is-invalid]="email?.invalid && email?.touched"
+          [class.is-valid]="email?.valid && email?.touched"
+        />
+        <div [hidden]="email?.valid || email?.untouched">
+          <small *ngIf="email?.errors?.['required']">
+            * Email is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone No.</label>
+        <input
+          type="text"
+          formControlName="phone"
+          class="form-control"
+          id="phone"
+          name="phone"
+          [class.is-invalid]="phone?.invalid && phone?.touched"
+          [class.is-valid]="phone?.valid && phone?.touched"
+        />
+        <div [hidden]="phone?.valid || phone?.untouched">
+          <small *ngIf="phone?.errors?.['required']">
+            * Phone Number is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="link" class="form-label">Link</label>
+        <input
+          type="text"
+          formControlName="link"
+          class="form-control"
+          id="link"
+          name="link"
+          [class.is-invalid]="link?.invalid && link?.touched"
+          [class.is-valid]="link?.valid && link?.touched"
+        />
+        <div [hidden]="link?.valid || link?.untouched">
+          <small *ngIf="link?.errors?.['required']">
+            * Link is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <label for="image" class="d-block fw-bold mb-2">CompanyImage</label>
+        <input type="file" id="image" (change)="SelectImage($event)" />
+      </div>
+    </div>
+  </form>
+
+  <footer class="tw-p-6">
+    <div class="d-flex justify-content-center align-items-center">
+      <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
+        <button [disabled]="form.invalid" (click)="Add()">Create</button>
+      </div>
+
+      <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
+        <button>Close</button>
+      </div>
+    </div>
+  </footer>
+</div>

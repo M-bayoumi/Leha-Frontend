@@ -1,0 +1,132 @@
+<div class="container main py-5">
+  <h2>Apply</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="col-md-12">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>JobTitle</mat-label>
+        <mat-select formControlName="jobId">
+          <mat-option *ngFor="let job of jobs" [value]="job?.id">
+            {{ job?.companyName }} - {{ job?.title }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3">
+      <label for="fullNameAr" class="form-label">fullNameAr</label>
+      <input
+        type="text"
+        formControlName="fullNameAr"
+        class="form-control"
+        id="fullNameAr"
+        name="fullNameAr"
+        [class.is-invalid]="fullNameAr?.invalid && fullNameAr?.touched"
+        [class.is-valid]="fullNameAr?.valid && fullNameAr?.touched"
+      />
+      <div [hidden]="fullNameAr?.valid || fullNameAr?.untouched">
+        <small *ngIf="fullNameAr?.errors?.['required']">
+          * fullNameAr is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="fullNameEn" class="form-label">fullNameEn</label>
+      <input
+        type="text"
+        formControlName="fullNameEn"
+        class="form-control"
+        id="fullNameEn"
+        name="fullNameEn"
+        [class.is-invalid]="fullNameEn?.invalid && fullNameEn?.touched"
+        [class.is-valid]="fullNameEn?.valid && fullNameEn?.touched"
+      />
+      <div [hidden]="fullNameEn?.valid || fullNameEn?.untouched">
+        <small *ngIf="fullNameEn?.errors?.['required']">
+          * fullNameEn is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="addressAr" class="form-label">addressAr</label>
+      <input
+        type="text"
+        formControlName="addressAr"
+        class="form-control"
+        id="addressAr"
+        name="addressAr"
+        [class.is-invalid]="addressAr?.invalid && addressAr?.touched"
+        [class.is-valid]="addressAr?.valid && addressAr?.touched"
+      />
+      <div [hidden]="addressAr?.valid || addressAr?.untouched">
+        <small *ngIf="addressAr?.errors?.['required']">
+          * addressAr is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="addressEn" class="form-label">addressEn</label>
+      <input
+        type="text"
+        formControlName="addressEn"
+        class="form-control"
+        id="addressEn"
+        name="addressEn"
+        [class.is-invalid]="addressEn?.invalid && addressEn?.touched"
+        [class.is-valid]="addressEn?.valid && addressEn?.touched"
+      />
+      <div [hidden]="addressEn?.valid || addressEn?.untouched">
+        <small *ngIf="addressEn?.errors?.['required']">
+          * addressEn is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="jobTitleAr" class="form-label">jobTitleAr</label>
+      <input
+        type="text"
+        formControlName="jobTitleAr"
+        class="form-control"
+        id="jobTitleAr"
+        name="jobTitleAr"
+        [class.is-invalid]="jobTitleAr?.invalid && jobTitleAr?.touched"
+        [class.is-valid]="jobTitleAr?.valid && jobTitleAr?.touched"
+      />
+      <div [hidden]="jobTitleAr?.valid || jobTitleAr?.untouched">
+        <small *ngIf="jobTitleAr?.errors?.['required']">
+          * jobTitleAr is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="jobTitleEn" class="form-label">jobTitleEn</label>
+      <input
+        type="text"
+        formControlName="jobTitleEn"
+        class="form-control"
+        id="jobTitleEn"
+        name="jobTitleEn"
+        [class.is-invalid]="jobTitleEn?.invalid && jobTitleEn?.touched"
+        [class.is-valid]="jobTitleEn?.valid && jobTitleEn?.touched"
+      />
+      <div [hidden]="jobTitleEn?.valid || jobTitleEn?.untouched">
+        <small *ngIf="jobTitleEn?.errors?.['required']">
+          * jobTitleEn is required.
+        </small>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <label for="image" class="d-block fw-bold mb-2">CV</label>
+      <input type="file" id="image" (change)="SelectImage($event)" />
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn">
+      Apply Now
+    </button>
+  </form>
+</div>

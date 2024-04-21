@@ -7,6 +7,8 @@ import { AddHomeImageComponent } from '../add-home-image/add-home-image.componen
 import { UpdateHomeImageComponent } from '../update-home-image/update-home-image.component';
 import { DeleteHomeImageComponent } from '../delete-home-image/delete-home-image.component';
 import { HomeImageDetailsComponent } from '../home-image-details/home-image-details.component';
+import { CompanyService } from '../../../services/companies/company.service';
+import { ICompanyRead } from '../../../models/Company/icompany-read';
 
 @Component({
   selector: 'app-all-home-images',
@@ -15,25 +17,47 @@ import { HomeImageDetailsComponent } from '../home-image-details/home-image-deta
 })
 export class AllHomeImagesComponent implements OnInit {
   homeImages: IHomeImageRead[] = [];
+  companies: ICompanyRead[] = [];
 
   constructor(
     private homeImageService: HomeImageService,
+    private companyService: CompanyService,
+
     public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     this.GetAll();
+    this.GetAllCompanies();
   }
 
-  FilterBusClasses() {
-    // if (userId.value == '0') {
-    //   this.GetAllReports();
-    //   console.log('all');
-    // } else {
-    //   this.GetAllReportsByUserId(userId.value);
-    //   console.log('byUser');
-    //   console.log(userId.value);
-    // }
+  FilterHomeImages(companyId: any) {
+    if (companyId.value == 0) {
+      this.GetAll();
+    } else {
+      this.GetAllByCompanyId(companyId.value);
+    }
+  }
+
+  GetAllByCompanyId(companyId: number) {
+    this.homeImageService.GetAllByCompanyId(companyId).subscribe({
+      next: (v) => {
+        let response = v as IResponse;
+        this.homeImages = response.data;
+      },
+      // error: (e) => console.log(e),
+      // complete: () => console.log('complete'),
+    });
+  }
+  GetAllCompanies() {
+    this.companyService.GetAll().subscribe({
+      next: (v) => {
+        let response = v as IResponse;
+        this.companies = response.data;
+      },
+      // error: (e) => console.log(e),
+      // complete: () => console.log('complete'),
+    });
   }
 
   GetAll() {

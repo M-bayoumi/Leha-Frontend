@@ -1,0 +1,43 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Forms</h1>
+    <div class="filter">
+      <h4>Job</h4>
+      <select #jobId (change)="FilterForms(jobId)">
+        <option value="0">All</option>
+        <option [value]="job.id" *ngFor="let job of jobs">
+          {{ job.title }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>FullName</th>
+          <th>Address</th>
+          <th>CV</th>
+          <th>JobTitle</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let form of forms; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ form.fullName }}</td>
+          <td>{{ form.address }}</td>
+          <td>
+            <img [src]="form.cv" alt="" />
+          </td>
+          <td>{{ form.jobTitle }}</td>
+          <td>
+            <button class="details" (click)="Details(form)">Details</button>
+            <button class="delete" (click)="Delete(form.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

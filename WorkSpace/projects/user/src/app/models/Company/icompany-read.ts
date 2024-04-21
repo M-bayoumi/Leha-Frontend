@@ -1,5 +1,5 @@
 export interface ICompanyRead {
-  id: string;
+  id: number;
   name: string;
   slogan: string;
   employees: number;
