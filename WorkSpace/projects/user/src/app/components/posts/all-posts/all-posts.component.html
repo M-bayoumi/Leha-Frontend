@@ -1,0 +1,50 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Posts</h1>
+    <button class="add" (click)="Add()">Add</button>
+    <div class="filter">
+      <h4>Company</h4>
+      <select #companyId (change)="FilterPosts(companyId)">
+        <option value="0">All</option>
+        <option
+          [value]="company.id"
+          *ngFor="let company of companies"
+        >
+          {{ company.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Content</th>
+          <th>Image</th>
+          <th>Company</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ post.content }}</td>
+          <td>
+            <img [src]="post.image" alt="" />
+          </td>
+          <td>{{ post.companyName }}</td>
+          <td>
+            <button class="details" (click)="Details(post)">
+              Details
+            </button>
+            <button class="update" (click)="Update(post)">Update</button>
+            <button class="delete" (click)="Delete(post.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

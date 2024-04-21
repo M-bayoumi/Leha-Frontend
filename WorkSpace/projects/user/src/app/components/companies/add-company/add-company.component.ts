@@ -11,7 +11,7 @@ import { IResponse } from '../../../models/iresponse';
   styleUrls: ['./add-company.component.scss'],
 })
 export class AddCompanyComponent implements OnInit {
-  companyForm: FormGroup;
+  form: FormGroup;
   selectedFile!: File;
 
   constructor(
@@ -20,7 +20,7 @@ export class AddCompanyComponent implements OnInit {
     private dialog: MatDialogRef<AddCompanyComponent>,
     private toastr: ToastrService
   ) {
-    this.companyForm = this.fb.group({
+    this.form = this.fb.group({
       nameAr: ['', [Validators.required]],
       nameEn: ['', [Validators.required]],
       sloganAr: ['', [Validators.required]],
@@ -67,29 +67,29 @@ export class AddCompanyComponent implements OnInit {
   }
 
   get nameAr() {
-    return this.companyForm.get('nameAr');
+    return this.form.get('nameAr');
   }
   get nameEn() {
-    return this.companyForm.get('nameEn');
+    return this.form.get('nameEn');
   }
   get sloganAr() {
-    return this.companyForm.get('sloganAr');
+    return this.form.get('sloganAr');
   }
   get sloganEn() {
-    return this.companyForm.get('sloganEn');
+    return this.form.get('sloganEn');
   }
 
   get employees() {
-    return this.companyForm.get('employees');
+    return this.form.get('employees');
   }
   get email() {
-    return this.companyForm.get('email');
+    return this.form.get('email');
   }
   get phone() {
-    return this.companyForm.get('phone');
+    return this.form.get('phone');
   }
 
   get link() {
-    return this.companyForm.get('link');
+    return this.form.get('link');
   }
 }

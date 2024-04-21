@@ -7,15 +7,16 @@ import { AddCompanyComponent } from '../add-company/add-company.component';
 import { UpdateCompanyComponent } from '../update-company/update-company.component';
 import { CompanyDetailsComponent } from '../company-details/company-details.component';
 import { DeleteCompanyComponent } from '../delete-company/delete-company.component';
+import { ICompanyDetails } from '../../../models/Company/icompany-details';
 
 @Component({
   selector: 'app-all-companies',
   templateUrl: './all-companies.component.html',
-  styleUrls: ['./all-companies.component.scss']
+  styleUrls: ['./all-companies.component.scss'],
 })
-
 export class AllCompaniesComponent implements OnInit {
   companies: ICompanyRead[] = [];
+  companyDetails!: ICompanyDetails;
 
   constructor(
     private companyService: CompanyService,
@@ -26,7 +27,6 @@ export class AllCompaniesComponent implements OnInit {
   ngOnInit(): void {
     this.GetAll();
   }
-
 
   GetAll() {
     this.companyService.GetAll().subscribe({
@@ -52,6 +52,18 @@ export class AllCompaniesComponent implements OnInit {
   }
 
   Update(company: ICompanyRead) {
+    this.companyService.GetDetails(company.id).subscribe({
+      next: (v) => {
+        let response = v as IResponse;
+        this.companyDetails = response.data;
+        this.GetDetails(this.companyDetails);
+      },
+      // error: (e) => console.log(e),
+      // complete: () => console.log('complete'),
+    });
+  }
+
+  GetDetails(company: ICompanyDetails) {
     const dialogRef = this.dialog.open(UpdateCompanyComponent, {
       width: '750px',
       data: company,

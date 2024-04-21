@@ -1,0 +1,39 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Members</h1>
+    <button class="add" (click)="Add()">Add</button>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let boardMember of boardMembers; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ boardMember.name }}</td>
+          <td>{{ boardMember.position }}</td>
+          <td>
+            <img [src]="boardMember.image" alt="" />
+          </td>
+          <td>
+            <button class="details" (click)="Details(boardMember)">
+              Details
+            </button>
+            <button class="update" (click)="Update(boardMember)">Update</button>
+            <button class="delete" (click)="Delete(boardMember.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

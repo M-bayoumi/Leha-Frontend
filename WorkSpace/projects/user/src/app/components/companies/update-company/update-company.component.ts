@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CompanyService } from '../../../services/companies/company.service';
 import { ToastrService } from 'ngx-toastr';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { ICompanyRead } from '../../../models/Company/icompany-read';
 import { IResponse } from '../../../models/iresponse';
+import { ICompanyDetails } from '../../../models/Company/icompany-details';
 
 @Component({
   selector: 'app-update-company',
@@ -12,7 +12,7 @@ import { IResponse } from '../../../models/iresponse';
   styleUrls: ['./update-company.component.scss'],
 })
 export class UpdateCompanyComponent {
-  companyForm: FormGroup;
+  form: FormGroup;
 
   selectedFile!: File;
 
@@ -21,55 +21,27 @@ export class UpdateCompanyComponent {
     private companyService: CompanyService,
     private toastr: ToastrService,
     public dialog: MatDialogRef<UpdateCompanyComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: ICompanyRead
+    @Inject(MAT_DIALOG_DATA) public data: ICompanyDetails
   ) {
-    this.companyForm = this.fb.group({
-      Id: [data.id, [Validators.required]],
-      nameAr: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
-      nameEn: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
-      sloganAr: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
-      sloganEn: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
+    this.form = this.fb.group({
+      Id: [data?.id || 0, [Validators.required]],
+      nameAr: [data?.nameAr || '', [Validators.required]],
+      nameEn: [data?.nameEn || '', [Validators.required]],
+      sloganAr: [data?.sloganAr || '', [Validators.required]],
+      sloganEn: [data?.sloganEn || '', [Validators.required]],
       employees: [
-        '',
-        [
-          Validators.required,
-          this.minValueValidator(2),
-        ],
+        data?.employees || 2,
+        [Validators.required, this.minValueValidator(2)],
       ],
       email: [
-        '',
+        data?.email || '',
         [
           Validators.required,
           Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
         ],
       ],
-      phone: ['', [Validators.required]],
-      link: [
-        '',
-        [
-          Validators.required,
-        ],
-      ],
+      phone: [data?.phone || '', [Validators.required]],
+      link: [data?.link || '', [Validators.required]],
     });
   }
   ngOnInit(): void {}
@@ -112,32 +84,32 @@ export class UpdateCompanyComponent {
   }
 
   get Id() {
-    return this.companyForm.get('Id');
+    return this.form.get('Id');
   }
   get nameAr() {
-    return this.companyForm.get('nameAr');
+    return this.form.get('nameAr');
   }
   get nameEn() {
-    return this.companyForm.get('nameEn');
+    return this.form.get('nameEn');
   }
   get sloganAr() {
-    return this.companyForm.get('sloganAr');
+    return this.form.get('sloganAr');
   }
   get sloganEn() {
-    return this.companyForm.get('sloganEn');
+    return this.form.get('sloganEn');
   }
 
   get employees() {
-    return this.companyForm.get('employees');
+    return this.form.get('employees');
   }
   get email() {
-    return this.companyForm.get('email');
+    return this.form.get('email');
   }
   get phone() {
-    return this.companyForm.get('phone');
+    return this.form.get('phone');
   }
 
   get link() {
-    return this.companyForm.get('link');
+    return this.form.get('link');
   }
 }

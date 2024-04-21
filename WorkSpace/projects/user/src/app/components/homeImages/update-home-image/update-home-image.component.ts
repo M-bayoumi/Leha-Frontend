@@ -15,7 +15,7 @@ import { IResponse } from '../../../models/iresponse';
 })
 
 export class UpdateHomeImageComponent {
-  homeImageForm: FormGroup;
+  form: FormGroup;
   companies: ICompanyRead[] = [];
 
   selectedFile!: File;
@@ -28,7 +28,7 @@ export class UpdateHomeImageComponent {
     public dialog: MatDialogRef<UpdateHomeImageComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IHomeImageRead
   ) {
-    this.homeImageForm = this.fb.group({
+    this.form = this.fb.group({
       Id: [data.id, [Validators.required]],
       companyId: [data.id, [Validators.required]],
     });
@@ -73,9 +73,9 @@ export class UpdateHomeImageComponent {
   }
 
   get Id() {
-    return this.homeImageForm.get('Id');
+    return this.form.get('Id');
   }
   get companyId() {
-    return this.homeImageForm.get('companyId');
+    return this.form.get('companyId');
   }
 }

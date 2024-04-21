@@ -1,11 +1,11 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Add Company</h1>
+    <h1 class="m-3">Add</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
   </header>
-  <form [formGroup]="companyForm">
+  <form [formGroup]="form">
     <div class="row mt-3">
       <div class="mb-3">
         <label for="nameAr" class="form-label">NameAr</label>
@@ -161,7 +161,7 @@
   <footer class="tw-p-6">
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
-        <button [disabled]="companyForm.invalid" (click)="Add()">Create</button>
+        <button [disabled]="form.invalid" (click)="Add()">Create</button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">

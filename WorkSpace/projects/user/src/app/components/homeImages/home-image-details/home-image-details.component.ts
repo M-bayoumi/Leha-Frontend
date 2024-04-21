@@ -9,14 +9,14 @@ import { IHomeImageRead } from '../../../models/HomeImage/ihome-image-read';
   styleUrls: ['./home-image-details.component.scss'],
 })
 export class HomeImageDetailsComponent implements OnInit {
-  homeImageForm: FormGroup;
+  form: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     public dialog: MatDialogRef<HomeImageDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IHomeImageRead
   ) {
-    this.homeImageForm = this.fb.group({
+    this.form = this.fb.group({
       id: [data?.id || ''],
       companyName: [data?.companyName || ''],
       imageURL: [data?.imageURL || ''],
@@ -25,12 +25,12 @@ export class HomeImageDetailsComponent implements OnInit {
   ngOnInit(): void {}
 
   get id() {
-    return this.homeImageForm.get('id');
+    return this.form.get('id');
   }
   get imageURL() {
-    return this.homeImageForm.get('imageURL');
+    return this.form.get('imageURL');
   }
   get companyName() {
-    return this.homeImageForm.get('companyName');
+    return this.form.get('companyName');
   }
 }

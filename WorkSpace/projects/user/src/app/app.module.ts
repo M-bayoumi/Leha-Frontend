@@ -49,6 +49,56 @@ import { AddCompanyComponent } from './components/companies/add-company/add-comp
 import { UpdateCompanyComponent } from './components/companies/update-company/update-company.component';
 import { DeleteCompanyComponent } from './components/companies/delete-company/delete-company.component';
 import { CompanyDetailsComponent } from './components/companies/company-details/company-details.component';
+import { AllBoardMemberComponent } from './components/boardMembers/all-board-member/all-board-member.component';
+import { AddBoardMemberComponent } from './components/boardMembers/add-board-member/add-board-member.component';
+import { DeleteBoardMemberComponent } from './components/boardMembers/delete-board-member/delete-board-member.component';
+import { UpdateBoardMemberComponent } from './components/boardMembers/update-board-member/update-board-member.component';
+import { BoardMemberDetailsComponent } from './components/boardMembers/board-member-details/board-member-details.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AllBoardMemberSpeechesComponent } from './components/boardMemberSpeeches/all-board-member-speeches/all-board-member-speeches.component';
+import { AddBoardMemberSpeechComponent } from './components/boardMemberSpeeches/add-board-member-speech/add-board-member-speech.component';
+import { UpdateBoardMemberSpeechComponent } from './components/boardMemberSpeeches/update-board-member-speech/update-board-member-speech.component';
+import { DeleteBoardMemberSpeechComponent } from './components/boardMemberSpeeches/delete-board-member-speech/delete-board-member-speech.component';
+import { BoardMemberSpeechDetailsComponent } from './components/boardMemberSpeeches/board-member-speech-details/board-member-speech-details.component';
+import { AllClientsComponent } from './components/clients/all-clients/all-clients.component';
+import { AddClientComponent } from './components/clients/add-client/add-client.component';
+import { UpdateClientComponent } from './components/clients/update-client/update-client.component';
+import { DeleteClientComponent } from './components/clients/delete-client/delete-client.component';
+import { ClientDetailsComponent } from './components/clients/client-details/client-details.component';
+import { AllAddressesComponent } from './components/companyAddresses/all-addresses/all-addresses.component';
+import { AddAddressComponent } from './components/companyAddresses/add-address/add-address.component';
+import { UpdateAddressComponent } from './components/companyAddresses/update-address/update-address.component';
+import { AddressDetailsComponent } from './components/companyAddresses/address-details/address-details.component';
+import { DeleteAddressComponent } from './components/companyAddresses/delete-address/delete-address.component';
+import { AllJobsComponent } from './components/jobs/all-jobs/all-jobs.component';
+import { AddJobComponent } from './components/jobs/add-job/add-job.component';
+import { UpdateJobComponent } from './components/jobs/update-job/update-job.component';
+import { DeleteJobComponent } from './components/jobs/delete-job/delete-job.component';
+import { JobDetailsComponent } from './components/jobs/job-details/job-details.component';
+import { AllFormsComponent } from './components/forms/all-forms/all-forms.component';
+import { AddFormComponent } from './components/forms/add-form/add-form.component';
+import { DeleteFormComponent } from './components/forms/delete-form/delete-form.component';
+import { FormDetailsComponent } from './components/forms/form-details/form-details.component';
+import { AllPostsComponent } from './components/posts/all-posts/all-posts.component';
+import { AddPostComponent } from './components/posts/add-post/add-post.component';
+import { UpdatePostComponent } from './components/posts/update-post/update-post.component';
+import { DeletePostComponent } from './components/posts/delete-post/delete-post.component';
+import { PostDetailsComponent } from './components/posts/post-details/post-details.component';
+import { AllProductsComponent } from './components/products/all-products/all-products.component';
+import { AddProductComponent } from './components/products/add-product/add-product.component';
+import { UpdateProductComponent } from './components/products/update-product/update-product.component';
+import { DeleteProductComponent } from './components/products/delete-product/delete-product.component';
+import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
+import { AllServicesComponent } from './components/Services/all-services/all-services.component';
+import { AddServiceComponent } from './components/Services/add-service/add-service.component';
+import { UpdateServiceComponent } from './components/Services/update-service/update-service.component';
+import { DeleteServiceComponent } from './components/Services/delete-service/delete-service.component';
+import { ServiceDetailsComponent } from './components/Services/service-details/service-details.component';
+import { AllProjectsComponent } from './components/projects/all-projects/all-projects.component';
+import { AddProjectComponent } from './components/projects/add-project/add-project.component';
+import { UpdateProjectComponent } from './components/projects/update-project/update-project.component';
+import { DeleteProjectComponent } from './components/projects/delete-project/delete-project.component';
+import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +115,57 @@ import { CompanyDetailsComponent } from './components/companies/company-details/
     AddCompanyComponent,
     UpdateCompanyComponent,
     DeleteCompanyComponent,
-    CompanyDetailsComponent
+    CompanyDetailsComponent,
+    AllBoardMemberComponent,
+    AddBoardMemberComponent,
+    DeleteBoardMemberComponent,
+    UpdateBoardMemberComponent,
+    BoardMemberDetailsComponent,
+    FooterComponent,
+    AllBoardMemberSpeechesComponent,
+    AddBoardMemberSpeechComponent,
+    UpdateBoardMemberSpeechComponent,
+    DeleteBoardMemberSpeechComponent,
+    BoardMemberSpeechDetailsComponent,
+    AllClientsComponent,
+    AddClientComponent,
+    UpdateClientComponent,
+    DeleteClientComponent,
+    ClientDetailsComponent,
+    AllAddressesComponent,
+    AddAddressComponent,
+    UpdateAddressComponent,
+    AddressDetailsComponent,
+    DeleteAddressComponent,
+    AllJobsComponent,
+    AddJobComponent,
+    UpdateJobComponent,
+    DeleteJobComponent,
+    JobDetailsComponent,
+    AllFormsComponent,
+    AddFormComponent,
+    DeleteFormComponent,
+    FormDetailsComponent,
+    AllPostsComponent,
+    AddPostComponent,
+    UpdatePostComponent,
+    DeletePostComponent,
+    PostDetailsComponent,
+    AllProductsComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    DeleteProductComponent,
+    ProductDetailsComponent,
+    AllServicesComponent,
+    AddServiceComponent,
+    UpdateServiceComponent,
+    DeleteServiceComponent,
+    ServiceDetailsComponent,
+    AllProjectsComponent,
+    AddProjectComponent,
+    UpdateProjectComponent,
+    DeleteProjectComponent,
+    ProjectDetailsComponent,
   ],
   imports: [
     BrowserModule,

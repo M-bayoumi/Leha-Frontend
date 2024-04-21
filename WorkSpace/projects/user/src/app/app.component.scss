@@ -1,5 +1,5 @@
 .main {
-  // position: relative;
+  position: relative;
   min-height: 100vh;
   .header {
     box-shadow: 0 1px 4px rgba(173, 173, 173, 0.35);
@@ -11,7 +11,7 @@
   }
   .body {
     background-color: #fafafa;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 270px);
   }
   .footer {
     width: 100%;

@@ -1,8 +1,7 @@
 <div class="main container py-5">
   <div class="top">
     <h1>All Companies</h1>
-    <button class="add" (click)="Add()">Add Company</button>
-
+    <button class="add" (click)="Add()">Add</button>
   </div>
   <div class="tableContainer">
     <table>
@@ -33,13 +32,9 @@
           <td>{{ company.phone }}</td>
           <td>{{ company.link }}</td>
           <td>
-            <button class="details" (click)="Details(company)">
-              Details
-            </button>
+            <button class="details" (click)="Details(company)">Details</button>
             <button class="update" (click)="Update(company)">Update</button>
-            <button class="delete" (click)="Delete(company.id)">
-              Delete
-            </button>
+            <button class="delete" (click)="Delete(company.id)">Delete</button>
           </td>
         </tr>
       </tbody>

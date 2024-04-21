@@ -1,0 +1,52 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Speeches</h1>
+    <button class="add" (click)="Add()">Add</button>
+    <div class="filter">
+      <h4>BoardMember</h4>
+      <select #boardMemberId (change)="FilterBoardMemberSpeeches(boardMemberId)">
+        <option value="0">All</option>
+        <option
+          [value]="boardMember.id"
+          *ngFor="let boardMember of boardMembers"
+        >
+          {{ boardMember.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Content</th>
+          <th>BoardMemberName</th>
+          <th>BoardMemberImage</th>
+          <th>BoardMemberPosition</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let boardMemberSpeech of boardMemberSpeeches; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ boardMemberSpeech.content }}</td>
+          <td>{{ boardMemberSpeech.boardMemberName }}</td>
+          <td>
+            <img [src]="boardMemberSpeech.boardMemberImage" alt="" />
+          </td>
+          <td>{{ boardMemberSpeech.boardMemberPosition }}</td>
+          <td>
+            <button class="details" (click)="Details(boardMemberSpeech)">
+              Details
+            </button>
+            <button class="update" (click)="Update(boardMemberSpeech)">Update</button>
+            <button class="delete" (click)="Delete(boardMemberSpeech.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

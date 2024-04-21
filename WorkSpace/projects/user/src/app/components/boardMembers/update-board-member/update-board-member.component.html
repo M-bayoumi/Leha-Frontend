@@ -1,0 +1,105 @@
+<div class="main p-4">
+  <header class="d-flex justify-content-between align-items-center">
+    <h1 class="m-3">Update</h1>
+    <span mat-flat-button matDialogClose class="text-danger">
+      <mat-icon>X</mat-icon>
+    </span>
+  </header>
+  <form [formGroup]="form">
+    <div class="row mt-3">
+      <div class="mb-3">
+        <label for="nameAr" class="form-label">NameAr</label>
+        <input
+          type="text"
+          formControlName="nameAr"
+          class="form-control"
+          id="nameAr"
+          name="nameAr"
+          [class.is-invalid]="nameAr?.invalid && nameAr?.touched"
+          [class.is-valid]="nameAr?.valid && nameAr?.touched"
+        />
+        <div [hidden]="nameAr?.valid || nameAr?.untouched">
+          <small *ngIf="nameAr?.errors?.['required']">
+            * NameAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nameEn" class="form-label">NameEn</label>
+        <input
+          type="text"
+          formControlName="nameEn"
+          class="form-control"
+          id="nameEn"
+          name="nameEn"
+          [class.is-invalid]="nameEn?.invalid && nameEn?.touched"
+          [class.is-valid]="nameEn?.valid && nameEn?.touched"
+        />
+        <div [hidden]="nameEn?.valid || nameEn?.untouched">
+          <small *ngIf="nameEn?.errors?.['required']">
+            * NameEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="sloganAr" class="form-label">PositionAr</label>
+        <input
+          type="text"
+          formControlName="positionAr"
+          class="form-control"
+          id="positionAr"
+          name="positionAr"
+          [class.is-invalid]="positionAr?.invalid && positionAr?.touched"
+          [class.is-valid]="positionAr?.valid && positionAr?.touched"
+        />
+        <div [hidden]="positionAr?.valid || positionAr?.untouched">
+          <small *ngIf="positionAr?.errors?.['required']">
+            * PositionAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="positionEn" class="form-label">PositionEn</label>
+        <input
+          type="text"
+          formControlName="positionEn"
+          class="form-control"
+          id="positionEn"
+          name="positionEn"
+          [class.is-invalid]="positionEn?.invalid && positionEn?.touched"
+          [class.is-valid]="positionEn?.valid && positionEn?.touched"
+        />
+        <div [hidden]="positionEn?.valid || positionEn?.untouched">
+          <small *ngIf="positionEn?.errors?.['required']">
+            * PositionEn is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="col-md-12">
+        <label for="image" class="d-block fw-bold mb-2"
+          >BoardMember Image</label
+        >
+        <input type="file" id="image" (change)="SelectImage($event)" />
+      </div>
+    </div>
+  </form>
+
+  <footer class="tw-p-6">
+    <div class="d-flex justify-content-center align-items-center">
+      <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
+        <button [disabled]="form.invalid" (click)="Update()">
+          Update
+        </button>
+      </div>
+
+      <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
+        <button>Close</button>
+      </div>
+    </div>
+  </footer>
+</div>

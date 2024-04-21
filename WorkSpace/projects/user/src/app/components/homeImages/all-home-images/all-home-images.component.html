@@ -1,7 +1,7 @@
 <div class="main container py-5">
   <div class="top">
     <h1>All HomeImages</h1>
-    <button class="add" (click)="Add()">Add HomeImage</button>
+    <button class="add" (click)="Add()">Add</button>
     <div class="filter">
       <h4>Company</h4>
       <select #companyId (change)="FilterHomeImages(companyId)">
@@ -20,13 +20,8 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Slogan</th>
-          <th>Employees No</th>
           <th>Image</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Link</th>
+          <th>Company</th>
           <th>Actions</th>
         </tr>
       </thead>

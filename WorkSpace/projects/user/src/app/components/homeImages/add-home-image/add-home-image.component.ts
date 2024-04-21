@@ -14,7 +14,7 @@ import { IResponse } from '../../../models/iresponse';
   styleUrls: ['./add-home-image.component.scss'],
 })
 export class AddHomeImageComponent implements OnInit {
-  homeImageForm: FormGroup;
+  form: FormGroup;
   companies: ICompanyRead[] = [];
   selectedFile!: File;
 
@@ -25,7 +25,7 @@ export class AddHomeImageComponent implements OnInit {
     private dialog: MatDialogRef<AddHomeImageComponent>,
     private toastr: ToastrService
   ) {
-    this.homeImageForm = this.fb.group({
+    this.form = this.fb.group({
       companyId: ['', [Validators.required]],
     });
   }
@@ -64,6 +64,6 @@ export class AddHomeImageComponent implements OnInit {
   }
 
   get companyId() {
-    return this.homeImageForm.get('companyId');
+    return this.form.get('companyId');
   }
 }
