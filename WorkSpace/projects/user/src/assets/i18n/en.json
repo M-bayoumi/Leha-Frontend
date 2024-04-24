@@ -1,0 +1,206 @@
+{
+  "dir": "ltr",
+  "header": {
+    "logo": "Leha",
+    "home": "Home",
+    "apply": "Apply",
+    "homeImages": "HomeImages",
+    "dashBoard": "DashBoard",
+    "companies": "Companies",
+    "addresses": "Addresses",
+    "members": "Members",
+    "speeches": "Speeches",
+    "clients": "Clients",
+    "jobs": "Jobs",
+    "forms": "Forms",
+    "posts": "Posts",
+    "products": "Products",
+    "services": "Services",
+    "projects": "Projects",
+    "projectPhases": "ProjectPhases",
+    "phaseItems": "PhaseItems",
+    "addUser": "Add User",
+    "logout": "Logout"
+  },
+  "companies": {
+    "all": {
+      "allCompanies": "All Companies",
+      "add": "Add",
+      "name": "Name",
+      "slogan": "Slogan",
+      "employees": "Employees",
+      "image": "Image",
+      "email": "Email",
+      "phone": "Phone",
+      "link": "Link",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "sloganAr": "SloganAr",
+      "sloganEn": "SloganEn",
+      "employees": "Employees",
+      "email": "Email",
+      "phone": "Phone",
+      "link": "Link",
+      "companyImage": "CompanyImage",
+      "create": "Create"
+    },
+    "details": {
+      "details": "Details",
+      "name": "Name",
+      "slogan": "Slogan",
+      "employees": "Employees",
+      "email": "Email",
+      "phone": "Phone",
+      "link": "Link",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "sloganAr": "SloganAr",
+      "sloganEn": "SloganEn",
+      "employees": "Employees",
+      "email": "Email",
+      "phone": "Phone",
+      "link": "Link",
+      "companyImage": "CompanyImage",
+      "close": "Close"
+    }
+  },
+  "members": {
+    "all": {
+      "allMembers": "All Members",
+      "add": "Add",
+      "name": "Name",
+      "position": "Position",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "positionAr": "PositionAr",
+      "positionEn": "PositionEn",
+      "memberImage": "MemberImage",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "name": "Name",
+      "position": "Position",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "positionAr": "PositionAr",
+      "positionEn": "PositionEn",
+      "memberImage": "MemberImage",
+      "close": "Close"
+    }
+  },
+  "speeches": {
+    "all": {
+      "allSpeeches": "All Speeches",
+      "add": "Add",
+      "member": "Member",
+      "all": "All",
+      "content": "Content",
+      "memberName": "MemberName",
+      "memberImage": "MemberImage",
+      "memberPosition": "MemberPosition",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "member": "Member",
+      "contentAr": "ContentAr",
+      "contentEn": "ContentEn",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "content": "Content",
+      "member": "Member",
+      "memberImage": "MemberImage",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "member": "Member",
+      "contentAr": "ContentAr",
+      "contentEn": "ContentEn",
+      "close": "Close"
+    }
+  },
+  "clients": {
+    "all": {
+      "allClients": "All Clients",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "name": "Name",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "clientImage": "ClientImage",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "name": "Name",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "clientImage": "ClientImage",
+      "close": "Close"
+    }
+  }
+}

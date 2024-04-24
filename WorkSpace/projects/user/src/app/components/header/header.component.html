@@ -1,68 +1,96 @@
 <header class="flex-column flex-lg-row container">
   <div class="left flex-column flex-md-row">
     <div class="logo">
-      <img src="https://go-bus.com/images/go-bus-dark.png" alt="" />
+      {{ "header.logo" | translate }}
     </div>
     <ul class="links">
-      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li>
-        <a routerLink="/homeImages" routerLinkActive="active">HomeImages</a>
+        <a routerLink="/home" routerLinkActive="active">{{
+          "header.home" | translate
+        }}</a>
       </li>
       <li>
-        <a routerLink="/companies" routerLinkActive="active">Companies</a>
-      </li>
-      <li>
-        <a routerLink="/addresses" routerLinkActive="active">Addresses</a>
-      </li>
-      <li>
-        <a routerLink="/members" routerLinkActive="active">Members</a>
-      </li>
-      <li>
-        <a routerLink="/speeches" routerLinkActive="active">Speeches</a>
-      </li>
-      <li>
-        <a routerLink="/clients" routerLinkActive="active">Clients</a>
-      </li>
-      <li>
-        <a routerLink="/jobs" routerLinkActive="active">Jobs</a>
-      </li>
-      <li>
-        <a routerLink="/forms" routerLinkActive="active">Forms</a>
-      </li>
-      <li>
-        <a routerLink="/apply" routerLinkActive="active">Apply</a>
-      </li>
-      <li>
-        <a routerLink="/posts" routerLinkActive="active">Posts</a>
-      </li>
-      <li>
-        <a routerLink="/products" routerLinkActive="active">Products</a>
-      </li>
-      <li>
-        <a routerLink="/services" routerLinkActive="active">Services</a>
-      </li>
-      <li>
-        <a routerLink="/projects" routerLinkActive="active">Projects</a>
+        <a routerLink="/apply" routerLinkActive="active">{{
+          "header.apply" | translate
+        }}</a>
       </li>
     </ul>
   </div>
   <div class="right">
-    <ul [hidden]="isUserLogged">
+    <!-- <ul [hidden]="isUserLogged">
       <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
       <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
-    </ul>
+    </ul> -->
     <ul [hidden]="!isUserLogged">
-      <div>
-        <mat-menu #menu="matMenu">
-          <!-- <button mat-menu-item>
-            <span>Edit Profile</span>
-          </button> -->
-          <button mat-menu-item>
-            <a routerLink="/history">Reservation History</a>
-          </button>
-        </mat-menu>
-      </div>
-      <li><a routerLink="/logout" (click)="LogOut()">LogOut</a></li>
+      <li [hidden]="!isAdmin">
+        <select class="dashBoard" onchange="window.location.href = this.value;">
+          <option>
+            <a routerLink="/">{{ "header.dashBoard" | translate }}</a>
+          </option>
+          <option value="/companies">
+            <a routerLink="/companies">{{ "header.companies" | translate }}</a>
+          </option>
+          <option value="/members">
+            <a routerLink="/members">{{ "header.members" | translate }}</a>
+          </option>
+          <option value="/speeches">
+            <a routerLink="/speeches">{{ "header.speeches" | translate }}</a>
+          </option>
+          <option value="/clients">
+            <a routerLink="/clients">{{ "header.clients" | translate }}</a>
+          </option>
+          <option value="/homeImages">
+            <a routerLink="/homeImages">{{
+              "header.homeImages" | translate
+            }}</a>
+          </option>
+          <option value="/addresses">
+            <a routerLink="/addresses">{{ "header.addresses" | translate }}</a>
+          </option>
+
+          <option value="/jobs">
+            <a routerLink="/jobs">{{ "header.jobs" | translate }}</a>
+          </option>
+          <option value="/forms">
+            <a routerLink="/forms">{{ "header.forms" | translate }}</a>
+          </option>
+          <option value="/posts">
+            <a routerLink="/posts">{{ "header.posts" | translate }}</a>
+          </option>
+          <option value="/products">
+            <a routerLink="/products">{{ "header.products" | translate }}</a>
+          </option>
+          <option value="/services">
+            <a routerLink="/services">{{ "header.services" | translate }}</a>
+          </option>
+          <option value="/projects">
+            <a routerLink="/projects">{{ "header.projects" | translate }}</a>
+          </option>
+          <option value="/projectPhases">
+            <a routerLink="/projectPhases">{{
+              "header.projectPhases" | translate
+            }}</a>
+          </option>
+          <option value="/phaseItems">
+            <a routerLink="/phaseItems">{{
+              "header.phaseItems" | translate
+            }}</a>
+          </option>
+        </select>
+      </li>
+      <li [hidden]="!isAdmin">
+        <a routerLink="/addUser" routerLinkActive="active">{{
+          "header.addUser" | translate
+        }}</a>
+      </li>
+      <li>
+        <a routerLink="/logout" (click)="LogOut()">{{
+          "header.logout" | translate
+        }}</a>
+      </li>
     </ul>
+    <button class="nav-link" (click)="changeLanguage()">
+      {{ lang == "en" ? "عربي" : "English" }}
+    </button>
   </div>
 </header>

@@ -1,0 +1,117 @@
+.main .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main .top h3 {
+  color: var(--color-main);
+  margin: 0;
+}
+
+.main .top .add {
+  background-color: var(--color-green);
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: var(--transition-main);
+}
+
+.main .top .add:hover {
+  background-color: white;
+  color: var(--color-green);
+  border: 2px solid var(--color-green);
+}
+
+.main .tableContainer {
+  overflow-x: auto;
+}
+
+.main table {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+}
+
+.main table thead {
+  background-color: var(--color-main);
+}
+
+.main table thead tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.main table thead th {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.main table tbody {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.main table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.main table tbody td {
+  padding: 10px;
+  text-align: center;
+}
+
+.main table tbody td img {
+  width: 200px;
+  min-width: 100px;
+}
+
+.main table tbody td:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.main table tbody td:last-child button {
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  outline: none;
+  transition: var(--transition-main);
+}
+
+.main table tbody td:last-child button:hover {
+  background-color: white;
+}
+
+.main table tbody td:last-child .details {
+  background-color: var(--color-main);
+}
+
+.main table tbody td:last-child .details:hover {
+  color: var(--color-main);
+  border: 2px solid var(--color-main);
+}
+
+.main table tbody td:last-child .update {
+  background-color: var(--color-orange);
+}
+
+.main table tbody td:last-child .update:hover {
+  color: var(--color-orange);
+  border: 2px solid var(--color-orange);
+}
+
+.main table tbody td:last-child .delete {
+  background-color: var(--color-red);
+}
+
+.main table tbody td:last-child .delete:hover {
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}

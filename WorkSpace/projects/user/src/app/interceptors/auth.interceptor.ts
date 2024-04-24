@@ -15,11 +15,17 @@ export class AuthInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    // Get the language from localStorage or any other source
+    const language = localStorage.getItem('lang') || 'en-US';
+
     const newRequest = request.clone({
       headers: request.headers.append(
         'Authorization',
-        `Bearer ` + localStorage.getItem('token')
+        `Bearer ${localStorage.getItem('token')}`
       ),
+      setHeaders: {
+        'Accept-Language': language == 'en' ? 'en-US' : 'ar-EG',
+      },
     });
 
     return next.handle(newRequest);

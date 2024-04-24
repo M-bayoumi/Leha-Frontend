@@ -1,6 +1,6 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Add</h1>
+    <h1 class="m-3">{{ "members.add.add" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
@@ -8,7 +8,7 @@
   <form [formGroup]="form">
     <div class="row mt-3">
       <div class="mb-3">
-        <label for="nameAr" class="form-label">NameAr</label>
+        <label for="nameAr" class="form-label">{{ "members.add.nameAr" | translate }}</label>
         <input
           type="text"
           formControlName="nameAr"
@@ -26,7 +26,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="nameEn" class="form-label">NameEn</label>
+        <label for="nameEn" class="form-label">{{ "members.add.nameEn" | translate }}</label>
         <input
           type="text"
           formControlName="nameEn"
@@ -44,7 +44,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="sloganAr" class="form-label">PositionAr</label>
+        <label for="sloganAr" class="form-label">{{ "members.add.positionAr" | translate }}</label>
         <input
           type="text"
           formControlName="positionAr"
@@ -62,7 +62,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="positionEn" class="form-label">PositionEn</label>
+        <label for="positionEn" class="form-label">{{ "members.add.positionEn" | translate }}</label>
         <input
           type="text"
           formControlName="positionEn"
@@ -80,7 +80,7 @@
       </div>
 
       <div class="col-md-12">
-        <label for="image" class="d-block fw-bold mb-2">BoardMember Image</label>
+        <label for="image" class="d-block fw-bold mb-2">{{ "members.add.memberImage" | translate }}</label>
         <input type="file" id="image" (change)="SelectImage($event)" />
       </div>
     </div>
@@ -89,11 +89,11 @@
   <footer class="tw-p-6">
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
-        <button [disabled]="form.invalid" (click)="Add()">Create</button>
+        <button [disabled]="form.invalid" (click)="Add()">{{ "members.add.create" | translate }}</button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "members.add.close" | translate }}</button>
       </div>
     </div>
   </footer>

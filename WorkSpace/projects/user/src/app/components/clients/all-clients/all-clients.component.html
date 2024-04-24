@@ -1,15 +1,14 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All Clients</h1>
-    <button class="add" (click)="Add()">Add</button>
+    <h1>{{ "clients.all.allClients" | translate }}</h1>
+    <button class="add" (click)="Add()">
+      {{ "clients.all.add" | translate }}
+    </button>
     <div class="filter">
-      <h4>Company</h4>
+      <h4>{{ "clients.all.company" | translate }}</h4>
       <select #companyId (change)="FilterClients(companyId)">
-        <option value="0">All</option>
-        <option
-          [value]="company.id"
-          *ngFor="let company of companies"
-        >
+        <option value="0">{{ "clients.all.all" | translate }}</option>
+        <option [value]="company.id" *ngFor="let company of companies">
           {{ company.name }}
         </option>
       </select>
@@ -20,10 +19,10 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Image</th>
-          <th>Company</th>
-          <th>Actions</th>
+          <th>{{ "clients.all.name" | translate }}</th>
+          <th>{{ "clients.all.image" | translate }}</th>
+          <th>{{ "clients.all.company" | translate }}</th>
+          <th>{{ "clients.all.actions" | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -36,11 +35,13 @@
           <td>{{ client.companyName }}</td>
           <td>
             <button class="details" (click)="Details(client)">
-              Details
+              {{ "clients.all.details" | translate }}
             </button>
-            <button class="update" (click)="Update(client)">Update</button>
+            <button class="update" (click)="Update(client)">
+              {{ "clients.all.update" | translate }}
+            </button>
             <button class="delete" (click)="Delete(client.id)">
-              Delete
+              {{ "clients.all.delete" | translate }}
             </button>
           </td>
         </tr>

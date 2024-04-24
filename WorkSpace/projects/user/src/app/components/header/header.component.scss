@@ -20,9 +20,9 @@ header {
       }
     }
     .logo {
-      img {
-        width: 100px;
-      }
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--color-main);
     }
     .links {
       display: flex;
@@ -56,11 +56,25 @@ header {
       }
     }
   }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: 576px) {
+      & {
+        gap: 10px;
+      }
+    }
+  }
   .right ul {
     display: flex;
     align-items: center;
     gap: 20px;
     li {
+      display: flex;
+      justify-content: center;
+      align-items: center !important;
+      height: 100%;
       a {
         color: var(--color-main);
         font-weight: bold;
@@ -84,4 +98,25 @@ header {
       }
     }
   }
+}
+/* Add styles to the options */
+.dashBoard {
+  padding: 5px 10px;
+}
+button{
+    color: var(--color-main);
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-main);
+      color: white;
+    }
+    @media (max-width: 576px) {
+      & {
+        font-size: 12px;
+      }
+    }
 }

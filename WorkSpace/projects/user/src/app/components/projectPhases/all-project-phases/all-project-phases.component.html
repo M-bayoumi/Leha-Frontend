@@ -1,0 +1,43 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All Phases</h1>
+    <button class="add" (click)="Add()">Add</button>
+    <div class="filter">
+      <h4>Project</h4>
+      <select #projectId (change)="FilterProjectPhases(projectId)">
+        <option value="0">All</option>
+        <option [value]="project.id" *ngFor="let project of projects">
+          {{ project.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Project</th>
+          <th>ProjectImage</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let phase of phases; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ phase.name }}</td>
+          <td>{{ phase.projectName }}</td>
+          <td>
+            <img [src]="phase.projectImage" alt="" />
+          </td>
+          <td>
+            <button class="details" (click)="Details(phase)">Details</button>
+            <button class="update" (click)="Update(phase)">Update</button>
+            <button class="delete" (click)="Delete(phase.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

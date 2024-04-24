@@ -141,4 +141,7 @@ export class RegisterComponent implements OnInit {
   get role() {
     return this.userRegisterForm.get('role');
   }
+  get isAdmin(): boolean {
+    return localStorage.getItem('role') == 'Admin';
+  }
 }

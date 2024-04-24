@@ -1,11 +1,11 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All Speeches</h1>
-    <button class="add" (click)="Add()">Add</button>
+    <h1>{{ "speeches.all.allSpeeches" | translate }}</h1>
+    <button class="add" (click)="Add()">{{ "speeches.all.add" | translate }}</button>
     <div class="filter">
-      <h4>BoardMember</h4>
+      <h4>{{ "speeches.all.member" | translate }}</h4>
       <select #boardMemberId (change)="FilterBoardMemberSpeeches(boardMemberId)">
-        <option value="0">All</option>
+        <option value="0">{{ "speeches.all.all" | translate }}</option>
         <option
           [value]="boardMember.id"
           *ngFor="let boardMember of boardMembers"
@@ -20,11 +20,11 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Content</th>
-          <th>BoardMemberName</th>
-          <th>BoardMemberImage</th>
-          <th>BoardMemberPosition</th>
-          <th>Actions</th>
+          <th>{{ "speeches.all.content" | translate }}</th>
+          <th>{{ "speeches.all.memberName" | translate }}</th>
+          <th>{{ "speeches.all.memberImage" | translate }}</th>
+          <th>{{ "speeches.all.memberPosition" | translate }}</th>
+          <th>{{ "speeches.all.actions" | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -38,11 +38,11 @@
           <td>{{ boardMemberSpeech.boardMemberPosition }}</td>
           <td>
             <button class="details" (click)="Details(boardMemberSpeech)">
-              Details
+              {{ "speeches.all.details" | translate }}
             </button>
-            <button class="update" (click)="Update(boardMemberSpeech)">Update</button>
+            <button class="update" (click)="Update(boardMemberSpeech)">{{ "speeches.all.update" | translate }}</button>
             <button class="delete" (click)="Delete(boardMemberSpeech.id)">
-              Delete
+              {{ "speeches.all.delete" | translate }}
             </button>
           </td>
         </tr>

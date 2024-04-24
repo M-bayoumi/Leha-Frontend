@@ -1,0 +1,355 @@
+<div class="main p-4">
+  <header class="d-flex justify-content-between align-items-center">
+    <h1 class="m-3">Update</h1>
+    <span mat-flat-button matDialogClose class="text-danger">
+      <mat-icon>X</mat-icon>
+    </span>
+  </header>
+  <form [formGroup]="form">
+    <div class="row mt-3">
+      <div class="mb-3">
+        <label for="number" class="form-label">number</label>
+        <input
+          type="text"
+          formControlName="number"
+          class="form-control"
+          id="number"
+          name="number"
+          [class.is-invalid]="number?.invalid && number?.touched"
+          [class.is-valid]="number?.valid && number?.touched"
+        />
+        <div [hidden]="number?.valid || number?.untouched">
+          <small *ngIf="number?.errors?.['required']">
+            * number is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nameAr" class="form-label">nameAr</label>
+        <input
+          type="text"
+          formControlName="nameAr"
+          class="form-control"
+          id="nameAr"
+          name="nameAr"
+          [class.is-invalid]="nameAr?.invalid && nameAr?.touched"
+          [class.is-valid]="nameAr?.valid && nameAr?.touched"
+        />
+        <div [hidden]="nameAr?.valid || nameAr?.untouched">
+          <small *ngIf="nameAr?.errors?.['required']">
+            * nameAr is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="nameEn" class="form-label">nameEn</label>
+        <input
+          type="text"
+          formControlName="nameEn"
+          class="form-control"
+          id="nameEn"
+          name="nameEn"
+          [class.is-invalid]="nameEn?.invalid && nameEn?.touched"
+          [class.is-valid]="nameEn?.valid && nameEn?.touched"
+        />
+        <div [hidden]="nameEn?.valid || nameEn?.untouched">
+          <small *ngIf="nameEn?.errors?.['required']">
+            * nameEn is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="acumulativePercentage" class="form-label">acumulativePercentage</label>
+        <input
+          type="number"
+          formControlName="acumulativePercentage"
+          class="form-control"
+          id="acumulativePercentage"
+          name="acumulativePercentage"
+          [class.is-invalid]="acumulativePercentage?.invalid && acumulativePercentage?.touched"
+          [class.is-valid]="acumulativePercentage?.valid && acumulativePercentage?.touched"
+        />
+        <div [hidden]="acumulativePercentage?.valid || acumulativePercentage?.untouched">
+          <small *ngIf="acumulativePercentage?.errors?.['required']">
+            * acumulativePercentage is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="progressPercentage" class="form-label">progressPercentage</label>
+        <input
+          type="number"
+          formControlName="progressPercentage"
+          class="form-control"
+          id="progressPercentage"
+          name="progressPercentage"
+          [class.is-invalid]="progressPercentage?.invalid && progressPercentage?.touched"
+          [class.is-valid]="progressPercentage?.valid && progressPercentage?.touched"
+        />
+        <div [hidden]="progressPercentage?.valid || progressPercentage?.untouched">
+          <small *ngIf="progressPercentage?.errors?.['required']">
+            * progressPercentage is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="executionProgressAr" class="form-label">executionProgressAr</label>
+        <input
+          type="text"
+          formControlName="executionProgressAr"
+          class="form-control"
+          id="executionProgressAr"
+          name="executionProgressAr"
+          [class.is-invalid]="executionProgressAr?.invalid && executionProgressAr?.touched"
+          [class.is-valid]="executionProgressAr?.valid && executionProgressAr?.touched"
+        />
+        <div [hidden]="executionProgressAr?.valid || executionProgressAr?.untouched">
+          <small *ngIf="executionProgressAr?.errors?.['required']">
+            * executionProgressAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="executionProgressEn" class="form-label">executionProgressEn</label>
+        <input
+          type="text"
+          formControlName="executionProgressEn"
+          class="form-control"
+          id="executionProgressEn"
+          name="executionProgressEn"
+          [class.is-invalid]="executionProgressEn?.invalid && executionProgressEn?.touched"
+          [class.is-valid]="executionProgressEn?.valid && executionProgressEn?.touched"
+        />
+        <div [hidden]="executionProgressEn?.valid || executionProgressEn?.untouched">
+          <small *ngIf="executionProgressEn?.errors?.['required']">
+            * executionProgressEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="rFIAr" class="form-label">rFIAr</label>
+        <input
+          type="text"
+          formControlName="rFIAr"
+          class="form-control"
+          id="rFIAr"
+          name="rFIAr"
+          [class.is-invalid]="rFIAr?.invalid && rFIAr?.touched"
+          [class.is-valid]="rFIAr?.valid && rFIAr?.touched"
+        />
+        <div [hidden]="rFIAr?.valid || rFIAr?.untouched">
+          <small *ngIf="rFIAr?.errors?.['required']">
+            * rFIAr is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="rFIEn" class="form-label">rFIEn</label>
+        <input
+          type="text"
+          formControlName="rFIAr"
+          class="form-control"
+          id="rFIAr"
+          name="rFIAr"
+          [class.is-invalid]="rFIEn?.invalid && rFIEn?.touched"
+          [class.is-valid]="rFIEn?.valid && rFIEn?.touched"
+        />
+        <div [hidden]="rFIEn?.valid || rFIEn?.untouched">
+          <small *ngIf="rFIEn?.errors?.['required']">
+            * rFIEn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="wIRAr" class="form-label">wIRAr</label>
+        <input
+          type="text"
+          formControlName="wIRAr"
+          class="form-control"
+          id="wIRAr"
+          name="wIRAr"
+          [class.is-invalid]="wIRAr?.invalid && wIRAr?.touched"
+          [class.is-valid]="wIRAr?.valid && wIRAr?.touched"
+        />
+        <div [hidden]="wIRAr?.valid || wIRAr?.untouched">
+          <small *ngIf="wIRAr?.errors?.['required']">
+            * wIRAr is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="wIREn" class="form-label">wIREn</label>
+        <input
+          type="text"
+          formControlName="wIREn"
+          class="form-control"
+          id="wIREn"
+          name="wIREn"
+          [class.is-invalid]="wIREn?.invalid && wIREn?.touched"
+          [class.is-valid]="wIREn?.valid && wIREn?.touched"
+        />
+        <div [hidden]="wIREn?.valid || wIREn?.untouched">
+          <small *ngIf="wIREn?.errors?.['required']">
+            * wIREn is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="scheduleAr" class="form-label">scheduleAr</label>
+        <input
+          type="text"
+          formControlName="scheduleAr"
+          class="form-control"
+          id="scheduleAr"
+          name="scheduleAr"
+          [class.is-invalid]="scheduleAr?.invalid && scheduleAr?.touched"
+          [class.is-valid]="scheduleAr?.valid && scheduleAr?.touched"
+        />
+        <div [hidden]="scheduleAr?.valid || scheduleAr?.untouched">
+          <small *ngIf="scheduleAr?.errors?.['required']">
+            * scheduleAr is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="scheduleEn" class="form-label">scheduleEn</label>
+        <input
+          type="text"
+          formControlName="scheduleEn"
+          class="form-control"
+          id="scheduleEn"
+          name="scheduleEn"
+          [class.is-invalid]="scheduleEn?.invalid && scheduleEn?.touched"
+          [class.is-valid]="scheduleEn?.valid && scheduleEn?.touched"
+        />
+        <div [hidden]="scheduleEn?.valid || scheduleEn?.untouched">
+          <small *ngIf="scheduleEn?.errors?.['required']">
+            * scheduleEn is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="unitAr" class="form-label">unitAr</label>
+        <input
+          type="text"
+          formControlName="unitAr"
+          class="form-control"
+          id="unitAr"
+          name="unitAr"
+          [class.is-invalid]="unitAr?.invalid && unitAr?.touched"
+          [class.is-valid]="unitAr?.valid && unitAr?.touched"
+        />
+        <div [hidden]="unitAr?.valid || unitAr?.untouched">
+          <small *ngIf="unitAr?.errors?.['required']">
+            * unitAr is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="unitEn" class="form-label">unitEn</label>
+        <input
+          type="text"
+          formControlName="unitEn"
+          class="form-control"
+          id="unitEn"
+          name="unitEn"
+          [class.is-invalid]="unitEn?.invalid && unitEn?.touched"
+          [class.is-valid]="unitEn?.valid && unitEn?.touched"
+        />
+        <div [hidden]="unitEn?.valid || unitEn?.untouched">
+          <small *ngIf="unitEn?.errors?.['required']">
+            * unitEn is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="initialInventoryQuantities" class="form-label">initialInventoryQuantities</label>
+        <input
+          type="number"
+          formControlName="initialInventoryQuantities"
+          class="form-control"
+          id="initialInventoryQuantities"
+          name="initialInventoryQuantities"
+          [class.is-invalid]="initialInventoryQuantities?.invalid && initialInventoryQuantities?.touched"
+          [class.is-valid]="initialInventoryQuantities?.valid && initialInventoryQuantities?.touched"
+        />
+        <div [hidden]="initialInventoryQuantities?.valid || initialInventoryQuantities?.untouched">
+          <small *ngIf="initialInventoryQuantities?.errors?.['required']">
+            * initialInventoryQuantities is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="actualInventoryQuantities" class="form-label">actualInventoryQuantities</label>
+        <input
+          type="number"
+          formControlName="actualInventoryQuantities"
+          class="form-control"
+          id="actualInventoryQuantities"
+          name="actualInventoryQuantities"
+          [class.is-invalid]="actualInventoryQuantities?.invalid && actualInventoryQuantities?.touched"
+          [class.is-valid]="actualInventoryQuantities?.valid && actualInventoryQuantities?.touched"
+        />
+        <div [hidden]="actualInventoryQuantities?.valid || actualInventoryQuantities?.untouched">
+          <small *ngIf="actualInventoryQuantities?.errors?.['required']">
+            * actualInventoryQuantities is required.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>ProjectPhase</mat-label>
+          <mat-select formControlName="projectPhaseId">
+            <mat-option
+              *ngFor="let projectPhase of projectPhases"
+              [value]="projectPhase?.id"
+            >
+            {{ projectPhase?.projectName }} - {{ projectPhase?.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+    </div>
+  </form>
+
+  <footer class="tw-p-6">
+    <div class="d-flex justify-content-center align-items-center">
+      <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
+        <button [disabled]="form.invalid" (click)="Update()">
+          Update
+        </button>
+      </div>
+
+      <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
+        <button>Close</button>
+      </div>
+    </div>
+  </footer>
+</div>

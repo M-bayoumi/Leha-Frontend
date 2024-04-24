@@ -1,6 +1,6 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Add</h1>
+    <h1 class="m-3">{{ "speeches.add.add" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
@@ -9,7 +9,7 @@
     <div class="row mt-3">
       <div class="col-md-12">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>BoardMember</mat-label>
+          <mat-label>{{ "speeches.add.member" | translate }}</mat-label>
           <mat-select formControlName="boardMemberId">
             <mat-option
               *ngFor="let boardMember of boardMembers"
@@ -22,7 +22,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="contentAr" class="form-label">ContentAr</label>
+        <label for="contentAr" class="form-label">{{ "speeches.add.contentAr" | translate }}</label>
         <input
           type="text"
           formControlName="contentAr"
@@ -40,7 +40,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="contentEn" class="form-label">ContentEn</label>
+        <label for="contentEn" class="form-label">{{ "speeches.add.contentEn" | translate }}</label>
         <input
           type="text"
           formControlName="contentEn"
@@ -63,12 +63,12 @@
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
         <button [disabled]="form.invalid" (click)="Add()">
-          Create
+          {{ "speeches.add.create" | translate }}
         </button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "speeches.add.close" | translate }}</button>
       </div>
     </div>
   </footer>

@@ -99,6 +99,24 @@ import { AddProjectComponent } from './components/projects/add-project/add-proje
 import { UpdateProjectComponent } from './components/projects/update-project/update-project.component';
 import { DeleteProjectComponent } from './components/projects/delete-project/delete-project.component';
 import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
+import { AllProjectPhasesComponent } from './components/projectPhases/all-project-phases/all-project-phases.component';
+import { AddProjectPhaseComponent } from './components/projectPhases/add-project-phase/add-project-phase.component';
+import { UpdateProjectPhaseComponent } from './components/projectPhases/update-project-phase/update-project-phase.component';
+import { DeleteProjectPhaseComponent } from './components/projectPhases/delete-project-phase/delete-project-phase.component';
+import { ProjectPhaseDetailsComponent } from './components/projectPhases/project-phase-details/project-phase-details.component';
+import { AllPhaseItemsComponent } from './components/phaseItems/all-phase-items/all-phase-items.component';
+import { AddPhaseItemComponent } from './components/phaseItems/add-phase-item/add-phase-item.component';
+import { UpdatePhaseItemComponent } from './components/phaseItems/update-phase-item/update-phase-item.component';
+import { DeletePhaseItemComponent } from './components/phaseItems/delete-phase-item/delete-phase-item.component';
+import { PhaseItemDetailsComponent } from './components/phaseItems/phase-item-details/phase-item-details.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+
+
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -166,6 +184,17 @@ import { ProjectDetailsComponent } from './components/projects/project-details/p
     UpdateProjectComponent,
     DeleteProjectComponent,
     ProjectDetailsComponent,
+    AllProjectPhasesComponent,
+    AddProjectPhaseComponent,
+    UpdateProjectPhaseComponent,
+    DeleteProjectPhaseComponent,
+    ProjectPhaseDetailsComponent,
+    AllPhaseItemsComponent,
+    AddPhaseItemComponent,
+    UpdatePhaseItemComponent,
+    DeletePhaseItemComponent,
+    PhaseItemDetailsComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -195,6 +224,14 @@ import { ProjectDetailsComponent } from './components/projects/project-details/p
     MatSortModule,
     MatTableModule,
     MatMenuModule,
+    TranslateModule.forRoot({
+      defaultLanguage:'en',
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [
     DatePipe,
@@ -205,3 +242,6 @@ import { ProjectDetailsComponent } from './components/projects/project-details/p
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

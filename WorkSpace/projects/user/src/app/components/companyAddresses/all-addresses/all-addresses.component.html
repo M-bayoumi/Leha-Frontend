@@ -30,10 +30,10 @@
         <tr *ngFor="let address of addresses; index as i">
           <td>{{ i + 1 }}</td>
           <td>{{ address.address }}</td>
+          <td>{{ address.companyName }}</td>
           <td>
             <img [src]="address.companyImage" alt="" />
           </td>
-          <td>{{ address.companyName }}</td>
           <td>
             <button class="details" (click)="Details(address)">
               Details

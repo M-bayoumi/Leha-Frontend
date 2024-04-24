@@ -5,8 +5,8 @@ export interface IPhaseItemRead {
   acumulativePercentage: number;
   progressPercentage: number;
   executionProgress: string;
-  rFI: string;
-  wIR: string;
+  rfi: string;
+  wir: string;
   schedule: string;
   unit: string;
   initialInventoryQuantities: number;

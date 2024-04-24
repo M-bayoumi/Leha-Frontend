@@ -7,10 +7,10 @@ export interface IPhaseItemDetails {
   progressPercentage: number;
   executionProgressAr: string;
   executionProgressEn: string;
-  rFIAr: string;
-  rFIEn: string;
-  wIRAr: string;
-  wIREn: string;
+  rfiAr: string;
+  rfiEn: string;
+  wirAr: string;
+  wirEn: string;
   scheduleAr: string;
   scheduleEn: string;
   unitAr: string;

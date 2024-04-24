@@ -2,7 +2,7 @@ export interface IFormRead {
   id: number;
   fullName: string;
   address: string;
-  formJobTitle: number;
+  formJobTitle: string;
   cv: string;
   jobId: string;
   formDateTime: Date;

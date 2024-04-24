@@ -1,0 +1,164 @@
+{
+  "dir": "rtl",
+  "header": {
+    "logo": "لحاء",
+    "home": "الصفحة الرئيسية",
+    "apply": "سجل الان",
+    "homeImages": "الصور الرئيسية",
+    "dashBoard": "لوحة التحكم",
+    "companies": "الشركات",
+    "addresses": "العناوين",
+    "members": "الاعضاء",
+    "speeches": "كلمات الاعضاء",
+    "clients": "العملاء",
+    "jobs": "الوظائف",
+    "forms": "التقديمات",
+    "posts": "الاخبار",
+    "products": "المنتجات",
+    "services": "الخدمات",
+    "projects": "المشاريع",
+    "projectPhases": "مراحل المشاريع",
+    "phaseItems": "بنود المراحل",
+    "addUser": "سجل مستخدم",
+    "logout": "تسجيل خروج"
+  },
+  "companies": {
+    "all": {
+      "allCompanies": "الشركات",
+      "add": "اضافة شركة",
+      "name": "الاسم",
+      "slogan": "الشعار",
+      "employees": "الموظفين",
+      "image": "الصورة",
+      "email": "البريد الالكتروني",
+      "phone": "الهاتف",
+      "link": "الرابط",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "sloganAr": "الشعار عربي",
+      "sloganEn": "الشعار انجليزي",
+      "employees": "الموظفين",
+      "email": "البريد الالكتروني",
+      "phone": "الهاتف",
+      "link": "الرايط",
+      "companyImage": "صورة الشركة",
+      "create": "انشاء"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "name": "الاسم",
+      "slogan": "الشعار",
+      "employees": "الموظفين",
+      "email": "البريد الاكتروني",
+      "phone": "الهاتف",
+      "link": "الرابط",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "sloganAr": "الشعار عربي",
+      "sloganEn": "الشعار انجليزي",
+      "employees": "الموظفين",
+      "email": "البريد الالكتروني",
+      "phone": "الهاتف",
+      "link": "الرايط",
+      "companyImage": "صورة الشركة",
+      "close": "اغلاق"
+    }
+  },
+  "members": {
+    "all": {
+      "allMembers": "الاعضاء",
+      "add": "اضافة",
+      "name": "الاسم",
+      "position": "الوظيفة",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "positionAr": "الوظيفة عربي",
+      "positionEn": "الوظيفة انجليزي",
+      "memberImage": "صورة العضو",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "name": "الاسم",
+      "position": "الوظيفة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "positionAr": "الوظيفة عربي",
+      "positionEn": "الوظيفة انجليزي",
+      "memberImage": "صورة العضو",
+      "close": "اغلاق"
+    }
+  },
+  "clients": {
+    "all": {
+      "allClients": "العملاء",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "name": "الاسم",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "clientImage": "صورة العميل",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "name": "الاسم",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "clientImage": "صورة العميل",
+      "close": "اغلاق"
+    }
+  }
+}

@@ -1,17 +1,19 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All Members</h1>
-    <button class="add" (click)="Add()">Add</button>
+    <h1>{{ "members.all.allMembers" | translate }}</h1>
+    <button class="add" (click)="Add()">
+      {{ "members.all.add" | translate }}
+    </button>
   </div>
   <div class="tableContainer">
     <table>
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Position</th>
-          <th>Image</th>
-          <th>Actions</th>
+          <th>{{ "members.all.name" | translate }}</th>
+          <th>{{ "members.all.position" | translate }}</th>
+          <th>{{ "members.all.image" | translate }}</th>
+          <th>{{ "members.all.actions" | translate }}</th>
         </tr>
       </thead>
 
@@ -25,11 +27,13 @@
           </td>
           <td>
             <button class="details" (click)="Details(boardMember)">
-              Details
+              {{ "members.all.details" | translate }}
             </button>
-            <button class="update" (click)="Update(boardMember)">Update</button>
+            <button class="update" (click)="Update(boardMember)">
+              {{ "members.all.update" | translate }}
+            </button>
             <button class="delete" (click)="Delete(boardMember.id)">
-              Delete
+              {{ "members.all.delete" | translate }}
             </button>
           </td>
         </tr>

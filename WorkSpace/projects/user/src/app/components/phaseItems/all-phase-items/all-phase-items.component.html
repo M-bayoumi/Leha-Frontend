@@ -1,0 +1,79 @@
+<div class="main container py-5">
+  <div class="top">
+    <h1>All PhaseItems</h1>
+    <button class="add" (click)="Add()">Add</button>
+
+    <div class="filter">
+      <h4>ProjectPhase</h4>
+      <select #projectPhaseId (change)="FilterPhaseItems(projectPhaseId)">
+        <option value="0">All</option>
+        <option
+          [value]="projectPhase.id"
+          *ngFor="let projectPhase of projectPhases"
+        >
+          {{ projectPhase.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="filter">
+      <h4>Project</h4>
+      <select #projectId (change)="FilterProjectPhases(projectId)">
+        <option value="0">All</option>
+        <option [value]="project.id" *ngFor="let project of projects">
+          {{ project.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Number</th>
+          <th>Name</th>
+          <th>AcumulativePercentage</th>
+          <th>ProgressPercentage</th>
+          <th>ExecutionProgress</th>
+          <th>RFI</th>
+          <th>WIR</th>
+          <th>Schedule</th>
+          <th>Unit</th>
+          <th>InitialInventoryQuantities</th>
+          <th>ActualInventoryQuantities</th>
+          <th>PercentageLossOrExceed</th>
+          <th>PhaseName</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let phaseItem of phaseItems; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ phaseItem.number }}</td>
+          <td>{{ phaseItem.name }}</td>
+          <td>{{ phaseItem.acumulativePercentage }}</td>
+          <td>{{ phaseItem.progressPercentage }}</td>
+          <td>{{ phaseItem.executionProgress }}</td>
+          <td>{{ phaseItem.rfi }}</td>
+          <td>{{ phaseItem.wir }}</td>
+          <td>{{ phaseItem.schedule }}</td>
+          <td>{{ phaseItem.unit }}</td>
+          <td>{{ phaseItem.initialInventoryQuantities }}</td>
+          <td>{{ phaseItem.actualInventoryQuantities }}</td>
+          <td>{{ phaseItem.percentageLossOrExceed }}</td>
+          <td>{{ phaseItem.projectPhaseName }}</td>
+          <td>
+            <button class="details" (click)="Details(phaseItem)">
+              Details
+            </button>
+            <button class="update" (click)="Update(phaseItem)">Update</button>
+            <button class="delete" (click)="Delete(phaseItem.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
