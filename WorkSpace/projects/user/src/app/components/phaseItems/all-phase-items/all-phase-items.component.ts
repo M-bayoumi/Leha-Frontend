@@ -173,4 +173,8 @@ export class AllPhaseItemsComponent implements OnInit {
       }
     });
   }
+
+  get role(): any {
+    return localStorage.getItem('role');
+  }
 }

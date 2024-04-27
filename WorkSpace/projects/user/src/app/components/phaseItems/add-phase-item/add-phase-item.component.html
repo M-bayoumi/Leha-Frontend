@@ -1,6 +1,6 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Add</h1>
+    <h1 class="m-3">{{ "phaseItems.add.add" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
@@ -8,7 +8,9 @@
   <form [formGroup]="form">
     <div class="row mt-3">
       <div class="mb-1">
-        <label for="number" class="form-label">number</label>
+        <label for="number" class="form-label">{{
+          "phaseItems.add.number" | translate
+        }}</label>
         <input
           type="text"
           formControlName="number"
@@ -26,7 +28,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="nameAr" class="form-label">nameAr</label>
+        <label for="nameAr" class="form-label">{{
+          "phaseItems.add.nameAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="nameAr"
@@ -44,7 +48,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="nameEn" class="form-label">nameEn</label>
+        <label for="nameEn" class="form-label">{{
+          "phaseItems.add.nameEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="nameEn"
@@ -62,9 +68,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="acumulativePercentage" class="form-label"
-          >acumulativePercentage</label
-        >
+        <label for="acumulativePercentage" class="form-label">{{
+          "phaseItems.add.acumulativePercentage" | translate
+        }}</label>
         <input
           type="number"
           formControlName="acumulativePercentage"
@@ -90,9 +96,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="progressPercentage" class="form-label"
-          >progressPercentage</label
-        >
+        <label for="progressPercentage" class="form-label">{{
+          "phaseItems.add.progressPercentage" | translate
+        }}</label>
         <input
           type="number"
           formControlName="progressPercentage"
@@ -116,9 +122,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="executionProgressAr" class="form-label"
-          >executionProgressAr</label
-        >
+        <label for="executionProgressAr" class="form-label">{{
+          "phaseItems.add.executionProgressAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="executionProgressAr"
@@ -144,9 +150,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="executionProgressEn" class="form-label"
-          >executionProgressEn</label
-        >
+        <label for="executionProgressEn" class="form-label">{{
+          "phaseItems.add.executionProgressEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="executionProgressEn"
@@ -172,7 +178,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="rfiAr" class="form-label">rfiAr</label>
+        <label for="rfiAr" class="form-label">{{
+          "phaseItems.add.rfiAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="rfiAr"
@@ -190,7 +198,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="rfiEn" class="form-label">rfiEn</label>
+        <label for="rfiEn" class="form-label">{{
+          "phaseItems.add.rfiEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="rfiEn"
@@ -208,7 +218,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="wirAr" class="form-label">wirAr</label>
+        <label for="wirAr" class="form-label">{{
+          "phaseItems.add.wirAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="wirAr"
@@ -226,7 +238,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="wirEn" class="form-label">wirEn</label>
+        <label for="wirEn" class="form-label">{{
+          "phaseItems.add.wirEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="wirEn"
@@ -244,7 +258,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="scheduleAr" class="form-label">scheduleAr</label>
+        <label for="scheduleAr" class="form-label">{{
+          "phaseItems.add.scheduleAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="scheduleAr"
@@ -262,7 +278,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="scheduleEn" class="form-label">scheduleEn</label>
+        <label for="scheduleEn" class="form-label">{{
+          "phaseItems.add.scheduleEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="scheduleEn"
@@ -280,7 +298,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="unitAr" class="form-label">unitAr</label>
+        <label for="unitAr" class="form-label">{{
+          "phaseItems.add.unitAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="unitAr"
@@ -298,7 +318,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="unitEn" class="form-label">unitEn</label>
+        <label for="unitEn" class="form-label">{{
+          "phaseItems.add.unitEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="unitEn"
@@ -316,9 +338,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="initialInventoryQuantities" class="form-label"
-          >initialInventoryQuantities</label
-        >
+        <label for="initialInventoryQuantities" class="form-label">{{
+          "phaseItems.add.initialInventoryQuantities" | translate
+        }}</label>
         <input
           type="number"
           formControlName="initialInventoryQuantities"
@@ -347,9 +369,9 @@
       </div>
 
       <div class="mb-1">
-        <label for="actualInventoryQuantities" class="form-label"
-          >actualInventoryQuantities</label
-        >
+        <label for="actualInventoryQuantities" class="form-label">{{
+          "phaseItems.add.actualInventoryQuantities" | translate
+        }}</label>
         <input
           type="number"
           formControlName="actualInventoryQuantities"
@@ -379,7 +401,7 @@
 
       <div class="col-md-12">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>ProjectPhase</mat-label>
+          <mat-label>{{ "phaseItems.add.phase" | translate }}</mat-label>
           <mat-select formControlName="projectPhaseId">
             <mat-option
               *ngFor="let projectPhase of projectPhases"
@@ -395,11 +417,13 @@
   <footer class="tw-p-6">
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
-        <button [disabled]="form.invalid" (click)="Add()">Create</button>
+        <button [disabled]="form.invalid" (click)="Add()">
+          {{ "phaseItems.add.create" | translate }}
+        </button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "phaseItems.add.close" | translate }}</button>
       </div>
     </div>
   </footer>

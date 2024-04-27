@@ -1,11 +1,13 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All Projects</h1>
-    <button class="add" (click)="Add()">Add</button>
+    <h1>{{ "projects.all.allProjects" | translate }}</h1>
+    <button class="add" (click)="Add()">
+      {{ "projects.all.add" | translate }}
+    </button>
     <div class="filter">
-      <h4>Company</h4>
+      <h4>{{ "projects.all.company" | translate }}</h4>
       <select #companyId (change)="FilterProjects(companyId)">
-        <option value="0">All</option>
+        <option value="0">{{ "projects.all.all" | translate }}</option>
         <option [value]="company.id" *ngFor="let company of companies">
           {{ company.name }}
         </option>
@@ -17,14 +19,14 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Address</th>
-          <th>Image</th>
-          <th>SiteEngineerName</th>
-          <th>ProjectProgressPercentage</th>
-          <th>Company</th>
-          <th>Actions</th>
+          <th>{{ "projects.all.name" | translate }}</th>
+          <th>{{ "projects.all.description" | translate }}</th>
+          <th>{{ "projects.all.address" | translate }}</th>
+          <th>{{ "projects.all.image" | translate }}</th>
+          <th>{{ "projects.all.siteEngineerName" | translate }}</th>
+          <th>{{ "projects.all.projectProgressPercentage" | translate }}</th>
+          <th>{{ "projects.all.company" | translate }}</th>
+          <th>{{ "projects.all.actions" | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -37,12 +39,18 @@
             <img [src]="project.image" alt="" />
           </td>
           <td>{{ project.siteEngineerName }}</td>
-          <td>{{ project.projectProgressPercentage }}</td>
+          <td>{{ project.projectProgressPercentage }}%</td>
           <td>{{ project.companyName }}</td>
           <td>
-            <button class="details" (click)="Details(project)">Details</button>
-            <button class="update" (click)="Update(project)">Update</button>
-            <button class="delete" (click)="Delete(project.id)">Delete</button>
+            <button class="details" (click)="Details(project)">
+              {{ "projects.all.details" | translate }}
+            </button>
+            <button class="update" (click)="Update(project)">
+              {{ "projects.all.update" | translate }}
+            </button>
+            <button class="delete" (click)="Delete(project.id)">
+              {{ "projects.all.delete" | translate }}
+            </button>
           </td>
         </tr>
       </tbody>

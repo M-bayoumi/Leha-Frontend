@@ -1,0 +1,15 @@
+<div class="main container py-5">
+  <h3>{{ "company.companies" | translate }}</h3>
+  <div class="companies">
+    <ng-container *ngFor="let company of companies">
+      <div class="box" (click)="ShowCompaniesDetails(company.id)">
+        <div class="image">
+          <img [src]="company.image" alt="" />
+        </div>
+        <div class="company px-3">
+          {{ company.name }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Add</h1>
+    <h1 class="m-3">{{ "projects.add.add" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
@@ -9,7 +9,7 @@
     <div class="row mt-3">
       <div class="col-md-12">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>Company</mat-label>
+          <mat-label>{{ "projects.add.company" | translate }}</mat-label>
           <mat-select formControlName="companyId">
             <mat-option *ngFor="let company of companies" [value]="company?.id">
               {{ company?.name }}
@@ -19,7 +19,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="nameAr" class="form-label">NameAr</label>
+        <label for="nameAr" class="form-label">{{ "projects.add.nameAr" | translate }}</label>
         <input
           type="text"
           formControlName="nameAr"
@@ -37,7 +37,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="nameEn" class="form-label">NameEn</label>
+        <label for="nameEn" class="form-label">{{ "projects.add.nameEn" | translate }}</label>
         <input
           type="text"
           formControlName="nameEn"
@@ -55,7 +55,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="descriptionAr" class="form-label">DescriptionAr</label>
+        <label for="descriptionAr" class="form-label">{{ "projects.add.descriptionAr" | translate }}</label>
         <input
           type="text"
           formControlName="descriptionAr"
@@ -73,7 +73,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="descriptionEn" class="form-label">DescriptionEn</label>
+        <label for="descriptionEn" class="form-label">{{ "projects.add.descriptionEn" | translate }}</label>
         <input
           type="text"
           formControlName="descriptionEn"
@@ -91,7 +91,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="addressAr" class="form-label">AddressAr</label>
+        <label for="addressAr" class="form-label">{{ "projects.add.addressAr" | translate }}</label>
         <input
           type="text"
           formControlName="addressAr"
@@ -109,7 +109,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="addressEn" class="form-label">AddressEn</label>
+        <label for="addressEn" class="form-label">{{ "projects.add.addressEn" | translate }}</label>
         <input
           type="text"
           formControlName="addressEn"
@@ -128,7 +128,7 @@
 
       <div class="mb-3">
         <label for="siteEngineerNameAr" class="form-label"
-          >SiteEngineerNameAr</label
+          >{{ "projects.add.siteEngineerNameAr" | translate }}</label
         >
         <input
           type="text"
@@ -154,7 +154,7 @@
 
       <div class="mb-3">
         <label for="siteEngineerNameEn" class="form-label"
-          >SiteEngineerNameEn</label
+          >{{ "projects.add.siteEngineerNameEn" | translate }}</label
         >
         <input
           type="text"
@@ -179,7 +179,7 @@
       </div>
 
       <div class="col-md-12">
-        <label for="image" class="d-block fw-bold mb-2">Project Image</label>
+        <label for="image" class="d-block fw-bold mb-2">{{ "projects.add.image" | translate }}</label>
         <input type="file" id="image" (change)="SelectImage($event)" />
       </div>
     </div>
@@ -188,11 +188,11 @@
   <footer class="tw-p-6">
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
-        <button [disabled]="form.invalid" (click)="Add()">Create</button>
+        <button [disabled]="form.invalid" (click)="Add()">{{ "projects.add.create" | translate }}</button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "projects.add.close" | translate }}</button>
       </div>
     </div>
   </footer>

@@ -1,6 +1,6 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="mb-3">Delete</h1>
+    <h1 class="mb-3">{{ "services.delete.delete" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
@@ -8,11 +8,11 @@
   <footer class="tw-p-6">
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
-        <button (click)="Delete()">Delete</button>
+        <button (click)="Delete()">{{ "services.delete.delete" | translate }}</button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "services.delete.close" | translate }}</button>
       </div>
     </div>
   </footer>

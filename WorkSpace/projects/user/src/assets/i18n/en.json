@@ -3,7 +3,8 @@
   "header": {
     "logo": "Leha",
     "home": "Home",
-    "apply": "Apply",
+    "apply": "Join us",
+    "company": "Companies",
     "homeImages": "HomeImages",
     "dashBoard": "DashBoard",
     "companies": "Companies",
@@ -202,5 +203,515 @@
       "clientImage": "ClientImage",
       "close": "Close"
     }
+  },
+  "addresses": {
+    "all": {
+      "allAddresses": "All Addresses",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "address": "Address",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "addressAr": "AddressAr",
+      "addressEn": "AddressEn",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "address": "Address",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "addressAr": "AddressAr",
+      "addressEn": "AddressEn",
+      "company": "Company",
+      "close": "Close"
+    }
+  },
+  "forms": {
+    "all": {
+      "allForms": "All Forms",
+      "job": "Job",
+      "all": "All",
+      "fullName": "FullName",
+      "address": "Address",
+      "cv": "CV",
+      "jobTitle": "JobTitle",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "apply": "Apply",
+      "jobTitle": "JobTitle",
+      "fullNameAr": "FullNameAr",
+      "fullNameEn": "FullNameEn",
+      "addressAr": "AddressAr",
+      "addressEn": "AddressEn",
+      "jobTitleAr": "JobTitleAr",
+      "jobTitleEn": "JobTitleEn",
+      "cv": "CV",
+      "applyNow": "Apply Now"
+    },
+    "details": {
+      "details": "Details",
+      "address": "Address",
+      "jobTitle": "JobTitle",
+      "fullName": "FullName",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    }
+  },
+  "homeImages": {
+    "all": {
+      "allHomeImages": "All HomeImages",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "homeImage": "HomeImage",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "company": "Company",
+      "close": "Close"
+    }
+  },
+  "jobs": {
+    "all": {
+      "allJobs": "All Jobs",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "title": "Title",
+      "description": "Description",
+      "averageSalary": "AverageSalary",
+      "dateTime": "DateTime",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "titleAr": "TitleAr",
+      "titleEn": "TitleEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "averageSalary": "AverageSalary",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "title": "Title",
+      "description": "Description",
+      "averageSalary": "AverageSalary",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "titleAr": "TitleAr",
+      "titleEn": "TitleEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "averageSalary": "AverageSalary",
+      "company": "Company",
+      "close": "Close"
+    }
+  },
+  "posts": {
+    "all": {
+      "allPosts": "All Posts",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "content": "Content",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "contentAr": "ContentAr",
+      "contentEn": "ContentEn",
+      "image": "Image",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "title": "Title",
+      "content": "Content",
+      "company": "Company",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "contentAr": "ContentAr",
+      "contentEn": "ContentEn",
+      "image": "Image",
+      "company": "Company",
+      "close": "Close"
+    }
+  },
+  "products": {
+    "all": {
+      "allProducts": "All Products",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "image": "Image",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "company": "Company",
+      "name": "Name",
+      "description": "Description",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "image": "Image",
+      "close": "Close"
+    }
+  },
+  "services": {
+    "all": {
+      "allServices": "All Services",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "image": "Image",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "company": "Company",
+      "name": "Name",
+      "description": "Description",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "image": "Image",
+      "close": "Close"
+    }
+  },
+  "projects": {
+    "all": {
+      "allProjects": "All Projects",
+      "add": "Add",
+      "company": "Company",
+      "all": "All",
+      "name": "Name",
+      "description": "Description",
+      "address": "Address",
+      "siteEngineerName": "SiteEngineerName",
+      "projectProgressPercentage": "ProjectProgressPercentage",
+      "image": "Image",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "addressAr": "AddressAr",
+      "addressEn": "AddressEn",
+      "siteEngineerNameAr": "SiteEngineerNameAr",
+      "siteEngineerNameEn": "SiteEngineerNameEn",
+      "image": "Image",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "company": "Company",
+      "name": "Name",
+      "description": "Description",
+      "address": "Address",
+      "siteEngineerName": "SiteEngineerName",
+      "projectProgressPercentage": "ProjectProgressPercentage",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "company": "Company",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "descriptionAr": "DescriptionAr",
+      "descriptionEn": "DescriptionEn",
+      "addressAr": "AddressAr",
+      "addressEn": "AddressEn",
+      "siteEngineerNameAr": "SiteEngineerNameAr",
+      "siteEngineerNameEn": "SiteEngineerNameEn",
+      "image": "Image",
+      "close": "Close"
+    }
+  },
+  "phases": {
+    "all": {
+      "allPhases": "All Phases",
+      "add": "Add",
+      "project": "Project",
+      "all": "All",
+      "name": "Name",
+      "image": "ProjectImage",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "project": "Project",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "project": "Project",
+      "name": "Name",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "project": "Project",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "close": "Close"
+    }
+  },
+  "phaseItems": {
+    "all": {
+      "allItems": "All Items",
+      "add": "Add",
+      "phase": "Phase",
+      "project": "Project",
+      "all": "All",
+      "number": "Number",
+      "name": "Name",
+      "acumulativePercentage": "AcumulativePercentage",
+      "progressPercentage": "ProgressPercentage",
+      "executionProgress": "ExecutionProgress",
+      "rfi": "RFI",
+      "wir": "WIR",
+      "schedule": "Schedule",
+      "unit": "Unit",
+      "initialInventoryQuantities": "InitialInventoryQuantities",
+      "actualInventoryQuantities": "UnActualInventoryQuantitiesit",
+      "percentageLossOrExceed": "PercentageLossOrExceed",
+      "phaseName": "PhaseName",
+      "actions": "Actions",
+      "details": "Details",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "add": {
+      "add": "Add",
+      "number": "Number",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "acumulativePercentage": "AcumulativePercentage",
+      "progressPercentage": "ProgressPercentage",
+      "executionProgressAr": "ExecutionProgressAr",
+      "executionProgressEn": "ExecutionProgressEn",
+      "rfiAr": "RFIAr",
+      "rfiEn": "RFIEn",
+      "wirAr": "WIRAr",
+      "wirEn": "WIREn",
+      "scheduleAr": "ScheduleAr",
+      "scheduleEn": "ScheduleEn",
+      "unitAr": "UnitAr",
+      "unitEn": "UnitEn",
+      "initialInventoryQuantities": "initialInventoryQuantities",
+      "actualInventoryQuantities": "ActualInventoryQuantities",
+      "Phase": "ProjectPhase",
+      "create": "Create",
+      "close": "Close"
+    },
+    "details": {
+      "details": "Details",
+      "number": "Number",
+      "name": "Name",
+      "acumulativePercentage": "AcumulativePercentage",
+      "progressPercentage": "ProgressPercentage",
+      "executionProgress": "ExecutionProgress",
+      "rfi": "RFI",
+      "wir": "WIR",
+      "schedule": "Schedule",
+      "initialInventoryQuantities": "InitialInventoryQuantities",
+      "actualInventoryQuantities": "ActualInventoryQuantities",
+      "percentageLossOrExceed": "PercentageLossOrExceed",
+      "phaseName": "PhaseName",
+      "close": "Close"
+    },
+    "delete": {
+      "delete": "Delete",
+      "close": "Close"
+    },
+    "update": {
+      "update": "Update",
+      "number": "Number",
+      "nameAr": "NameAr",
+      "nameEn": "NameEn",
+      "acumulativePercentage": "AcumulativePercentage",
+      "progressPercentage": "ProgressPercentage",
+      "executionProgressAr": "ExecutionProgressAr",
+      "executionProgressEn": "ExecutionProgressEn",
+      "rfiAr": "RFIAr",
+      "rfiEn": "RFIEn",
+      "wirAr": "WIRAr",
+      "wirEn": "WIREn",
+      "scheduleAr": "ScheduleAr",
+      "scheduleEn": "ScheduleEn",
+      "unitAr": "UnitAr",
+      "unitEn": "UnitEn",
+      "initialInventoryQuantities": "initialInventoryQuantities",
+      "actualInventoryQuantities": "ActualInventoryQuantities",
+      "Phase": "ProjectPhase",
+      "close": "Close"
+    }
+  },
+  "register": {
+    "register": "Register",
+    "fullName": "FullName",
+    "userName": "UserName",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "address": "Address",
+    "role": "Role",
+    "submit": "Submit"
+  },
+  "login": {
+    "login": "login",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "submit": "Submit"
+  },
+  "company": {
+    "companies": "Companies"
   }
 }

@@ -16,9 +16,7 @@ export class HeaderComponent implements OnInit {
   ) {
     if ('lang' in localStorage) {
       this.lang = localStorage.getItem('lang');
-
-    }else{
-
+    } else {
       this.lang = this.translate.currentLang;
     }
     this._activatedRoute.paramMap.subscribe((params) => {
@@ -45,7 +43,7 @@ export class HeaderComponent implements OnInit {
   get isUserLogged(): boolean {
     return localStorage.getItem('token') ? true : false;
   }
-  get isAdmin(): boolean {
-    return localStorage.getItem('role') == 'Admin';
+  get role(): any {
+    return localStorage.getItem('role');
   }
 }

@@ -74,7 +74,7 @@ export class AllFormsComponent implements OnInit {
 
   Details(form: IFormRead) {
     const dialogRef = this.dialog.open(FormDetailsComponent, {
-      width: '1200px',
+      width: '750px',
       data: form,
     });
 
@@ -87,7 +87,7 @@ export class AllFormsComponent implements OnInit {
 
   Delete(formId: number) {
     const dialogRef = this.dialog.open(DeleteFormComponent, {
-      width: '2200px',
+      width: '750px',
       data: formId,
     });
     dialogRef.afterClosed().subscribe((result) => {

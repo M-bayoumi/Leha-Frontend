@@ -3,7 +3,8 @@
   "header": {
     "logo": "لحاء",
     "home": "الصفحة الرئيسية",
-    "apply": "سجل الان",
+    "apply": "انضم لنا",
+    "company": "الشركات",
     "homeImages": "الصور الرئيسية",
     "dashBoard": "لوحة التحكم",
     "companies": "الشركات",
@@ -160,5 +161,514 @@
       "clientImage": "صورة العميل",
       "close": "اغلاق"
     }
+  },
+  "addresses": {
+    "all": {
+      "allAddresses": "العناوين",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "address": "العنوان",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "addressAr": "العنوان عربي",
+      "addressEn": "العنوان انجليزي",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "address": "العنوان",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "addressAr": "العنوان عربي",
+      "addressEn": "العنوان انجليزي",
+      "company": "الشركة",
+      "close": "اغلاق"
+    }
+  },
+  "forms": {
+    "all": {
+      "allForms": "التقديمات",
+      "job": "الوظيفة",
+      "all": "الكل",
+      "fullName": "الاسم بالكامل",
+      "address": "العنوان",
+      "cv": "السيرة الذاتية",
+      "jobTitle": "عنوان الوظيفة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "apply": "سجل",
+      "jobTitle": "عنوان الوظيفة",
+      "fullNameAr": "الاسم بالكامل عربي",
+      "fullNameEn": "الاسم بالكامل انجليزي",
+      "addressAr": "العنوان عربي",
+      "addressEn": "العنوان انجليزي",
+      "jobTitleAr": "عنوان الوظيفة عربي",
+      "jobTitleEn": "عنوان الوظيفة انجليزي",
+      "cv": "السيرة الذاتية",
+      "applyNow": "سجل الان"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "address": "العنوان",
+      "jobTitle": "عنوان الوظيفة",
+      "fullName": "الاسم بالكامل",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    }
+  },
+  "homeImages": {
+    "all": {
+      "allHomeImages": "الصور الرئيسية",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "homeImage": "الصورة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "company": "الشركة",
+      "close": "اغلاق"
+    }
+  },
+  "jobs": {
+    "all": {
+      "allJobs": "كل الوظائف",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "title": "العنوان",
+      "description": "الوصف",
+      "averageSalary": "متوسط المرتب",
+      "dateTime": "التاريخ",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "titleAr": "العنوان عربي",
+      "titleEn": "العنوان انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "averageSalary": "متوسط المرتب",
+      "create": "اضافة",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "title": "العنوان",
+      "description": "الوصف",
+      "averageSalary": "متوسط المرتب",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "titleAr": "العنوان عربي",
+      "titleEn": "العنوان انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "averageSalary": "متوسط المرتب",
+      "company": "الشركة",
+      "close": "اغلاق"
+    }
+  },
+  "posts": {
+    "all": {
+      "allPosts": "الاخبار",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "content": "المحتوي",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "contentAr": "المحتوي عربي",
+      "contentEn": "المحتوي انجليزي",
+      "image": "الصورة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "content": "المحتوي",
+      "company": "الشركة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "contentAr": "المحتوي عربي",
+      "contentEn": "المحتوي انجليزي",
+      "image": "الصورة",
+      "company": "الشركة",
+      "close": "اغلاق"
+    }
+  },
+  "products": {
+    "all": {
+      "allProducts": "المنتجات",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "name": "الاسم",
+      "description": "الوصف",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "image": "الصورة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "company": "الشركة",
+      "name": "الاسم",
+      "description": "الوصف",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "image": "الصورة",
+      "close": "اغلاق"
+    }
+  },
+  "services": {
+    "all": {
+      "allServices": "الخدمات",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "name": "الاسم",
+      "description": "الوصف",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "image": "الصورة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "company": "الشركة",
+      "name": "الاسم",
+      "description": "الوصف",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "image": "الصورة",
+      "close": "اغلاق"
+    }
+  },
+  "projects": {
+    "all": {
+      "allProjects": "المشاريع",
+      "add": "اضافة",
+      "company": "الشركة",
+      "all": "الكل",
+      "name": "الاسم",
+      "description": "الوصف",
+      "address": "العنوان",
+      "siteEngineerName": "مهندس الموقع",
+      "projectProgressPercentage": "نسبة تنفيذ المشروع",
+      "image": "الصورة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "addressAr": "العنوان عربي",
+      "addressEn": "العنوان انجليزي",
+      "siteEngineerNameAr": "مهندس الموقع عربي",
+      "siteEngineerNameEn": "مهندس الموقع انجليزي",
+      "image": "الصورة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "company": "الشركة",
+      "name": "الاسم",
+      "description": "الوصف",
+      "address": "العنوان",
+      "siteEngineerName": "مهندس الموقع",
+      "projectProgressPercentage": "نذبة تنفيذ المشروع",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "company": "الشركة",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "descriptionAr": "الوصف عربي",
+      "descriptionEn": "الوصف انجليزي",
+      "addressAr": "العنوان عربي",
+      "addressEn": "العنوان انجليزي",
+      "siteEngineerNameAr": "مهندس الموقع عربي",
+      "siteEngineerNameEn": "مهندس الموقع انجليزي",
+      "image": "الصورة",
+      "close": "اغلاق"
+    }
+  },
+  "phases": {
+    "all": {
+      "allPhases": "مراحل المشاريع",
+      "add": "اضافة",
+      "project": "المشروع",
+      "all": "الكل",
+      "name": "اسم المرحلة",
+      "image": "صورة المشروع",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "project": "المشروع",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "project": "المشروع",
+      "name": "اسم المرحلة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "project": "المشروع",
+      "nameAr": "اسم المرحلة عربي",
+      "nameEn": "اسم المرحلة انجليزي",
+      "close": "اغلاق"
+    }
+  },
+  "phaseItems": {
+    "all": {
+      "allItems": "البنود",
+      "add": "اضافة",
+      "phase": "المرحلة",
+      "project": "المشروع",
+      "all": "الكل",
+      "number": "رقم الند",
+      "name": "الاسم",
+      "acumulativePercentage": "النسبة الكلية",
+      "progressPercentage": "نسبة التنفيذ",
+      "executionProgress": "موقف التنفيذ",
+      "rfi": "RFI",
+      "wir": "WIR",
+      "schedule": "الخطة الزمنية",
+      "unit": "الوحدة",
+      "initialInventoryQuantities": "الحصر الابتدائي",
+      "actualInventoryQuantities": "الحصر الفعلي",
+      "percentageLossOrExceed": "نسبة الهدر / الزيادة",
+      "phaseName": "المرحلة",
+      "actions": "الاجراءات",
+      "details": "التفاصيل",
+      "update": "تعديل",
+      "delete": "حذف"
+    },
+    "add": {
+      "add": "اضافة",
+      "number": "رقم البند",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "acumulativePercentage": "النسبة الكلية",
+      "progressPercentage": "نسبة التنفيذ",
+      "executionProgressAr": "موقف التنفيذ عربي",
+      "executionProgressEn": "موقف التنفيذ انجليزي",
+      "rfiAr": "RFIAr",
+      "rfiEn": "RFIEn",
+      "wirAr": "WIRAr",
+      "wirEn": "WIREn",
+      "scheduleAr": "الجدول الزمني عربي",
+      "scheduleEn": "الجدول الزمني انجليزي",
+      "unitAr": "الوحدة عربي",
+      "unitEn": "الوحدة انجليزي",
+      "initialInventoryQuantities": "الحصر الابتدائي",
+      "actualInventoryQuantities": "الحصر الفعلي",
+      "Phase": "المرحلة",
+      "create": "انشاء",
+      "close": "اغلاق"
+    },
+    "details": {
+      "details": "التفاصيل",
+      "number": "رقم البند",
+      "name": "اسم البند",
+      "acumulativePercentage": "النسبة الكلية",
+      "progressPercentage": "نسبة التنفيذ",
+      "executionProgress": "موقف التنفيذ",
+      "rfi": "RFI",
+      "wir": "WIR",
+      "schedule": "الجدول الزمني",
+      "initialInventoryQuantities": "الحصر الابتدائي",
+      "actualInventoryQuantities": "الحصر الفعلي",
+      "percentageLossOrExceed": "نسبة الهدر / الزيادة",
+      "phaseName": "المرحلة",
+      "close": "اغلاق"
+    },
+    "delete": {
+      "delete": "حذف",
+      "close": "اغلاق"
+    },
+    "update": {
+      "update": "تعديل",
+      "number": "رقم البند",
+      "nameAr": "الاسم عربي",
+      "nameEn": "الاسم انجليزي",
+      "acumulativePercentage": "النسبة الكلية",
+      "progressPercentage": "نسبة التنفيذ",
+      "executionProgressAr": "موقف التنفيذ عربي",
+      "executionProgressEn": "موقف التنفيذ انجليزي",
+      "rfiAr": "RFIAr",
+      "rfiEn": "RFIEn",
+      "wirAr": "WIRAr",
+      "wirEn": "WIREn",
+      "scheduleAr": "الجدول الزمني عربي",
+      "scheduleEn": "الجدول الزمني انجليزي",
+      "unitAr": "الوحدة عربي",
+      "unitEn": "الوحدة انجليزي",
+      "initialInventoryQuantities": "الحصر الابتدائي",
+      "actualInventoryQuantities": "الحصر الفعلي",
+      "Phase": "المرحلة",
+      "close": "Close"
+    }
+  },
+  "register": {
+    "register": "سجل الان",
+    "fullName": "الاسم بالكامل",
+    "userName": "اسم المستخدم",
+    "email": "البريد الالكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة السر",
+    "confirmPassword": "تاكيد كلمة السر",
+    "address": "العنوان",
+    "role": "الصلاحية",
+    "submit": "ارسل"
+  },
+  "login": {
+    "login": "تسجيل دخول",
+    "email": "البريد الالكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة السر",
+    "submit": "ادخل"
+  },
+  "company": {
+    "companies": "الشركات"
   }
 }

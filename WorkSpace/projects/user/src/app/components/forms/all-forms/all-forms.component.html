@@ -1,10 +1,10 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All Forms</h1>
+    <h1>{{ "forms.all.allForms" | translate }}</h1>
     <div class="filter">
-      <h4>Job</h4>
+      <h4>{{ "forms.all.job" | translate }}</h4>
       <select #jobId (change)="FilterForms(jobId)">
-        <option value="0">All</option>
+        <option value="0">{{ "forms.all.all" | translate }}</option>
         <option [value]="job.id" *ngFor="let job of jobs">
           {{ job.title }}
         </option>
@@ -16,11 +16,11 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>FullName</th>
-          <th>Address</th>
-          <th>CV</th>
-          <th>JobTitle</th>
-          <th>Actions</th>
+          <th>{{ "forms.all.fullName" | translate }}</th>
+          <th>{{ "forms.all.address" | translate }}</th>
+          <th>{{ "forms.all.cv" | translate }}</th>
+          <th>{{ "forms.all.jobTitle" | translate }}</th>
+          <th>{{ "forms.all.actions" | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -33,8 +33,8 @@
           </td>
           <td>{{ form.jobTitle }}</td>
           <td>
-            <button class="details" (click)="Details(form)">Details</button>
-            <button class="delete" (click)="Delete(form.id)">Delete</button>
+            <button class="details" (click)="Details(form)">{{ "forms.all.details" | translate }}</button>
+            <button class="delete" (click)="Delete(form.id)">{{ "forms.all.delete" | translate }}</button>
           </td>
         </tr>
       </tbody>

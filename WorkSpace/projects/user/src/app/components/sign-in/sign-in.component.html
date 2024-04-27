@@ -1,8 +1,8 @@
 <div class="container main py-5">
-  <h2>Login</h2>
+  <h2>{{ "login.login" | translate }}</h2>
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
+      <label for="email" class="form-label">{{ "login.email" | translate }}</label>
       <input
         type="email"
         formControlName="email"
@@ -24,7 +24,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
+      <label for="password" class="form-label">{{ "login.password" | translate }}</label>
       <input
         type="password"
         formControlName="password"
@@ -44,6 +44,6 @@
       </div>
     </div>
 
-    <button [disabled]="form.invalid" type="submit" class="btn">Submit</button>
+    <button [disabled]="form.invalid" type="submit" class="btn">{{ "login.submit" | translate }}</button>
   </form>
 </div>

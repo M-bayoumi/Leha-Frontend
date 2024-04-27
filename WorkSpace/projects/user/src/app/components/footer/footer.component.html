@@ -1,37 +1,102 @@
-<div class="main container">
-  <div class="links flex-column flex-md-row">
-    <div class="logo text-center text-md-start">
-      <img src="https://go-bus.com/images/go-bus.png" alt="" />
+<!-- Start Footer -->
+<div class="footer" id="footer">
+  <div class="container">
+    <div class="box1">
+      <h2 [hidden]="lang == 'ar'">Leha Group</h2>
+      <h2 [hidden]="lang == 'en'">مجموعة لحاء</h2>
+      <p [hidden]="lang == 'ar'">
+        Happy to serve our clients. For collaborations , inquiries and
+        complaints press><a href="mailto:info@leha.com.sa" target="_blank"
+          >→ here ←</a
+        >
+      </p>
+      <p [hidden]="lang == 'en'">
+        سعداء لخدمة عملائنا. للتعاون والاستفسارات والشكاوى اضغط
+        <a href="mailto:info@leha.com.sa" target="_blank">هنا</a>
+      </p>
+      <p>Currently v2.0</p>
     </div>
-    <ul class="social">
-      <li>
-        <a href="https://www.facebook.com/Mando12355" target=""
-          ><img src="https://go-bus.com/images/fb.png" alt=""
-        /></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/mohamed.bayoumi98/" target=""
-          ><img src="https://go-bus.com/images/instagram.png" alt=""
-        /></a>
-      </li>
-      <li>
+    <div class="box2">
+      <h2 [hidden]="lang == 'ar'">About us</h2>
+      <h2 [hidden]="lang == 'en'">عن الشركة</h2>
+      <ul>
+        <li *ngFor="let company of companies">
+          <a [href]="company.link">{{ company.name }}</a>
+        </li>
+        <li><a href="https://bolansteel.com.sa/">Bolan</a></li>
+        <li><a href="http://malsafwa.com.sa/">ElSafwa Schools</a></li>
+      </ul>
+    </div>
+    <div class="box3">
+      <h2 [hidden]="lang == 'ar'">Contact us</h2>
+      <h2 [hidden]="lang == 'en'">تواصل معنا</h2>
+      <ul>
+        <li>Postal code: 365385</li>
+        <li>Phone: +966114620970</li>
+        <li>Fax: +966114161145</li>
+        <li>E-mail: info@leha.com.sa</li>
+        <li>11393 Riyadh-KSA</li>
+      </ul>
+    </div>
+    <div class="box4">
+      <h2 [hidden]="lang == 'ar'">Social media</h2>
+      <h2 [hidden]="lang == 'en'">التواصل الاجتماعي</h2>
+      <div class="social-media">
         <a
-          href="https://www.linkedin.com/in/mohamed-bayoumi-1b8a39233/"
-          target=""
-          ><img src="https://go-bus.com/images/linkedin.png" alt=""
-        /></a>
-      </li>
-      <li>
+          href="https://www.facebook.com/lehagroup?mibextid=ZbWKwL"
+          target="_blank"
+          ><i
+            class="fa-brands fa-facebook-f"
+            style="color: rgb(45, 123, 212)"
+          ></i
+        ></a>
+        <a href="mailto:info@leha.com.sa" target="_blank"
+          ><i class="fa-solid fa-envelope" style="color: rgb(45, 123, 212)"></i
+        ></a>
         <a
-          href="https://api.whatsapp.com/send?phone=201093996245&text=%20"
-          target=""
-          ><img src="https://go-bus.com/images/whatsapp.png" alt=""
-        /></a>
-      </li>
-    </ul>
+          href="https://youtube.com/@lehagroup5274?si=oheWRGZWG1JE8Hnh"
+          target="_blank"
+          ><i class="fa-brands fa-youtube" style="color: red"></i
+        ></a>
+        <a href="https://www.linkedin.com/company/lehagroup/" target="_blank"
+          ><i class="fa-brands fa-linkedin" style="color: rgb(45, 123, 212)"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/lehagroup?igsh=MXR6bHJnbjc4ODU1Zw=="
+          target="_blank"
+          ><i class="fa-brands fa-instagram" style="color: #ff1361"></i>
+        </a>
+        <a
+          href="https://x.com/lehagroup?t=gXy92TFgfeyWpHtlYYw8Ww&s=09"
+          target="_blank"
+          ><i class="fa fa-twitter"></i
+        ></a>
+      </div>
+    </div>
   </div>
-  <hr />
-  <p class="text-center text-md-start">
-    © 2023 ALL COPYRIGHTS RESERVED - GOBYE
-  </p>
+  <div class="row">
+    <div
+      class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 map"
+      style="justify-content: center; text-align: center"
+    >
+      <h5 style="text-align: center">Location</h5>
+      <ul class="list-unstyled mb-5">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d719.6151349030607!2d46.703785075795196!3d24.698672750271204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f030c97c3a30b%3A0x75a277936047f76c!2z2YXYrNmF2YjYudipINi02LHZg9in2Kog2YTYrdin2KEgKNi02LHZg9ipINmE2K3Yp9ihINmE2YTZhdmC2KfZiNmE2KfYqi8g2LTYsdmD2Kkg2YTYrdin2KEg2YTZhNiq2KzYp9ix2Kkg2YjYp9mE2KrYs9mI2YrZgiDYp9mE2LLYsdin2LnZiSkgLSBMZWhhIEdyb3VwIENvbXBhbmllcw!5e0!3m2!1sen!2ssa!4v1709120430590!5m2!1sen!2ssa"
+          width="250"
+          height="120"
+          style="
+            border: 0.4px solid #378de8;
+            box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.473);
+            padding: 0.3px;
+            border-radius: 8px;
+          "
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </ul>
+    </div>
+  </div>
 </div>
+<!-- End Footer -->

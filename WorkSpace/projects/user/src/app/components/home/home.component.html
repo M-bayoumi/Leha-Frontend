@@ -1,1 +1,99 @@
-<p>home works!</p>
+<!-- slider.component.html -->
+<div class="slider">
+  <div
+    class="slide"
+    *ngFor="let homeImage of homeImages; let i = index"
+    [class.active]="i === currentIndex"
+  >
+    <img [src]="homeImage.imageURL" alt="Slide Image" />
+    <div class="companyInfo">
+      <h3>{{ homeImage.companyName }}</h3>
+      <h4>{{ homeImage.companySlogan }}</h4>
+      <div class="companyLink">
+        <a [href]="homeImage.companyLink" [hidden]="lang == 'ar'">Visit us</a>
+        <a [href]="homeImage.companyLink" [hidden]="lang == 'en'">زور موقعنا</a>
+      </div>
+    </div>
+  </div>
+  <button class="left" (click)="prevSlide()"></button>
+  <button class="right" (click)="nextSlide()"></button>
+</div>
+
+<div class="main container py-5">
+  <div class="aboutUs" [hidden]="lang == 'ar'">
+    <h1>About us</h1>
+    <p>
+      Leha Group, which originated in the Saudi desert, has expanded to include
+      several companies serving diverse sectors. Our journey began in 1995 with
+      the production of 2,000 tons of potatoes. It has continued to grow thanks
+      to the trust our customers have given us. In 2003, we launched a fleet of
+      refrigerated trucks to facilitate transportation. We also established Leha
+      Refrigeration and Storage, a project that includes the largest cold
+      storage warehouses in Saudi Arabia. Then Leha Trading and Marketing was
+      established to provide the best agricultural services, and provide seeds
+      and agricultural equipment. In 2004, we established Leha Architectural
+      Contracting, to provide building and construction services. We at Lehaa
+      Group always strive to provide the best services and products to our
+      customers, relying on professionalism and quality.
+    </p>
+  </div>
+  <div class="aboutUs" [hidden]="lang == 'en'">
+    <h1>عن الشركة</h1>
+    <p>
+      مجموعة لحاء، التي نشأت في الصحراء السعودية، توسعت لتشمل العديد من الشركات
+      التي تخدم قطاعات متنوعة. بدأت رحلتنا عام 1995 بإنتاج 2000 طن من البطاطس.
+      وقد استمرت في النمو بفضل الثقة التي منحها لنا عملاؤنا. في عام 2003، أطلقنا
+      أسطولًا من الشاحنات المبردة لتسهيل عملية النقل. أنشأنا أيضًا لحاء للتبريد
+      والتخزين، وهو مشروع يضم أكبر مستودعات التبريد في السعودية. من ثم تم إنشاء
+      لحاء للتجارة والتسويق لتقديم أفضل خدمات الزراعة، وتوفير البذور والمعدات
+      الزراعية. وفي عام 2004، أنشأنا لحاء للمقاولات المعمارية، لتقديم خدمات
+      البناء والتشييد. نحن في مجموعة لحاء نسعى دائمًا لتقديم أفضل الخدمات
+      والمنتجات لعملاؤنا، بالاعتماد على الاحترافية والجودة.
+    </p>
+  </div>
+
+  <h2 [hidden]="lang == 'ar'">Board Members</h2>
+  <h2 [hidden]="lang == 'en'">الاعضاء</h2>
+  <div class="members">
+    <div class="box" *ngFor="let speech of speeches">
+      <div class="image">
+        <img [src]="speech.boardMemberImage" alt="" />
+      </div>
+      <h3>{{ speech.boardMemberName }}</h3>
+      <h5>{{ speech.boardMemberPosition }}</h5>
+      <p>{{ speech.content }}</p>
+    </div>
+  </div>
+
+  <h2 [hidden]="lang == 'ar'">News</h2>
+  <h2 [hidden]="lang == 'en'">الاخبار</h2>
+  <div class="sliderNews my-5">
+    <div
+      class="slideNews"
+      *ngFor="let post of posts; let i = index"
+      [class.active]="i === currentPost"
+    >
+      <img [src]="post.image" alt="Slide Image" />
+      <div class="companyInfo">
+        <h2>{{ post.companyName }}</h2>
+        <h4>{{ post.content }}</h4>
+      </div>
+    </div>
+    <button class="left" (click)="prevPost()"></button>
+    <button class="right" (click)="nextPost()"></button>
+  </div>
+
+  <h2 class="familyTitle" [hidden]="lang == 'ar'">Our Family</h2>
+  <h2 class="familyTitle" [hidden]="lang == 'en'">العائلة</h2>
+  <div class="family my-5">
+    <div class="box" *ngFor="let company of companies">
+      <img [src]="company.image" alt="" />
+    </div>
+    <div class="box">
+      <img src="../../../assets/1.jpeg" alt="" />
+    </div>
+    <div class="box">
+      <img src="../../../assets/2.jpeg" alt="" />
+    </div>
+  </div>
+</div>

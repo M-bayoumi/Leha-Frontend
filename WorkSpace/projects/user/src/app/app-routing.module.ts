@@ -18,29 +18,85 @@ import { AllProjectsComponent } from './components/projects/all-projects/all-pro
 import { AllProjectPhasesComponent } from './components/projectPhases/all-project-phases/all-project-phases.component';
 import { AllPhaseItemsComponent } from './components/phaseItems/all-phase-items/all-phase-items.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import { AuthGuard } from './gaurds/auth.guard';
+import { engineerGuard } from './gaurds/engineer.guard';
+import { adminGuard } from './gaurds/admin.guard';
+import { superAdminGuard } from './gaurds/super-admin.guard';
+import { supervisorGuard } from './gaurds/supervisor.guard';
+import { CompanyComponent } from './components/company/company.component';
+import { CompaniesDetailsComponent } from './components/companies-details/companies-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'apply', component: AddFormComponent },
+  { path: 'company', component: CompanyComponent },
+  { path: 'company/:id', component: CompaniesDetailsComponent },
+
   { path: 'register', component: RegisterComponent },
 
   { path: 'login', component: SignInComponent },
-  { path: 'addUser', component: RegisterComponent, canActivate: [AuthGuard]  },
-  { path: 'homeImages', component: AllHomeImagesComponent, canActivate: [AuthGuard] },
-  { path: 'companies', component: AllCompaniesComponent, canActivate: [AuthGuard] },
-  { path: 'addresses', component: AllAddressesComponent , canActivate: [AuthGuard] },
-  { path: 'members', component: AllBoardMemberComponent, canActivate: [AuthGuard]  },
-  { path: 'speeches', component: AllBoardMemberSpeechesComponent , canActivate: [AuthGuard] },
-  { path: 'clients', component: AllClientsComponent , canActivate: [AuthGuard] },
-  { path: 'jobs', component: AllJobsComponent , canActivate: [AuthGuard] },
-  { path: 'forms', component: AllFormsComponent , canActivate: [AuthGuard] },
-  { path: 'posts', component: AllPostsComponent , canActivate: [AuthGuard] },
-  { path: 'products', component: AllProductsComponent , canActivate: [AuthGuard] },
-  { path: 'services', component: AllServicesComponent , canActivate: [AuthGuard] },
-  { path: 'projects', component: AllProjectsComponent, canActivate: [AuthGuard]  },
-  { path: 'projectPhases', component: AllProjectPhasesComponent , canActivate: [AuthGuard] },
-  { path: 'phaseItems', component: AllPhaseItemsComponent , canActivate: [AuthGuard] },
+  {
+    path: 'addUser',
+    component: RegisterComponent,
+    canActivate: [superAdminGuard],
+  },
+  {
+    path: 'homeImages',
+    component: AllHomeImagesComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'companies',
+    component: AllCompaniesComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'addresses',
+    component: AllAddressesComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'members',
+    component: AllBoardMemberComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'speeches',
+    component: AllBoardMemberSpeechesComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'clients',
+    component: AllClientsComponent,
+    canActivate: [adminGuard],
+  },
+  { path: 'jobs', component: AllJobsComponent, canActivate: [adminGuard] },
+  { path: 'forms', component: AllFormsComponent, canActivate: [adminGuard] },
+  { path: 'posts', component: AllPostsComponent, canActivate: [adminGuard] },
+  {
+    path: 'products',
+    component: AllProductsComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'services',
+    component: AllServicesComponent,
+    canActivate: [adminGuard],
+  },
+  {
+    path: 'projects',
+    component: AllProjectsComponent,
+    canActivate: [supervisorGuard],
+  },
+  {
+    path: 'projectPhases',
+    component: AllProjectPhasesComponent,
+    canActivate: [supervisorGuard],
+  },
+  {
+    path: 'phaseItems',
+    component: AllPhaseItemsComponent,
+    canActivate: [engineerGuard],
+  },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 

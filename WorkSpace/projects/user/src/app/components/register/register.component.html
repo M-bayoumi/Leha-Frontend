@@ -1,8 +1,8 @@
 <div class="container main py-5">
-  <h2>Register</h2>
+  <h2>{{ "register.register" | translate }}</h2>
   <form [formGroup]="userRegisterForm" (ngSubmit)="submit()">
     <div class="mb-3">
-      <label for="fullName" class="form-label">FullName</label>
+      <label for="fullName" class="form-label">{{ "register.fullName" | translate }}</label>
       <input
         type="text"
         formControlName="fullName"
@@ -24,7 +24,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="userName" class="form-label">UserName</label>
+      <label for="userName" class="form-label">{{ "register.userName" | translate }}</label>
       <input
         type="text"
         formControlName="userName"
@@ -46,7 +46,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
+      <label for="email" class="form-label">{{ "register.email" | translate }}</label>
       <input
         type="email"
         formControlName="email"
@@ -68,14 +68,13 @@
     </div>
 
     <div class="mb-3">
-      <label for="phoneNumber" class="form-label">Phone No.</label>
+      <label for="phoneNumber" class="form-label">{{ "register.phone" | translate }}</label>
       <input
         type="text"
         formControlName="phoneNumber"
         class="form-control"
         id="phoneNumber"
         name="phoneNumber"
-        pattern="[0-9]{11}"
         [class.is-invalid]="phoneNumber?.invalid && phoneNumber?.touched"
         [class.is-valid]="phoneNumber?.valid && phoneNumber?.touched"
       />
@@ -83,15 +82,11 @@
         <small *ngIf="phoneNumber?.errors?.['required']">
           * Phone Number is required.
         </small>
-        <small *ngIf="phoneNumber?.errors?.['pattern']">
-          * Please provide a valid Phone Number,
-          <b>{{phoneNumber?.errors?.['pattern'].actualValue}}</b> is not valid.
-        </small>
       </div>
     </div>
 
     <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
+      <label for="password" class="form-label">{{ "register.password" | translate }}</label>
       <input
         type="password"
         formControlName="password"
@@ -112,7 +107,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <label for="confirmPassword" class="form-label">{{ "register.confirmPassword" | translate }}</label>
       <input
         type="password"
         formControlName="confirmPassword"
@@ -135,7 +130,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="address" class="form-label">Address</label>
+      <label for="address" class="form-label">{{ "register.address" | translate }}</label>
       <input
         type="text"
         formControlName="address"
@@ -155,10 +150,10 @@
         </small>
       </div>
     </div>
-    <div class="row mt-3" [hidden]="!isAdmin">
+    <div class="row mt-3" [hidden]="!isSuperAdmin">
       <div class="col-md-12">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>Role</mat-label>
+          <mat-label>{{ "register.role" | translate }}</mat-label>
           <mat-select formControlName="role">
             <mat-option *ngFor="let role of roles" [value]="role?.name">
               {{ role?.name }}
@@ -168,7 +163,7 @@
       </div>
     </div>
     <button [disabled]="userRegisterForm.invalid" type="submit" class="btn">
-      Submit
+      {{ "register.submit" | translate }}
     </button>
   </form>
 </div>

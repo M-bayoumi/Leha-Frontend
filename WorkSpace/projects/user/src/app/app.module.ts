@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -111,12 +111,11 @@ import { DeletePhaseItemComponent } from './components/phaseItems/delete-phase-i
 import { PhaseItemDetailsComponent } from './components/phaseItems/phase-item-details/phase-item-details.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 
-
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {HttpClient} from '@angular/common/http';
-
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+import { CompanyComponent } from './components/company/company.component';
+import { CompaniesDetailsComponent } from './components/companies-details/companies-details.component';
 
 @NgModule({
   declarations: [
@@ -195,6 +194,8 @@ import {HttpClient} from '@angular/common/http';
     DeletePhaseItemComponent,
     PhaseItemDetailsComponent,
     SignInComponent,
+    CompanyComponent,
+    CompaniesDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -206,7 +207,7 @@ import {HttpClient} from '@angular/common/http';
     BrowserAnimationsModule,
     ToastrModule.forRoot({ positionClass: 'toast-top-right' }),
     NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
-
+    CommonModule,
     MatAutocompleteModule,
     MatNativeDateModule,
     MatBottomSheetModule,
@@ -225,13 +226,13 @@ import {HttpClient} from '@angular/common/http';
     MatTableModule,
     MatMenuModule,
     TranslateModule.forRoot({
-      defaultLanguage:'en',
+      defaultLanguage: 'en',
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-  })
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [
     DatePipe,

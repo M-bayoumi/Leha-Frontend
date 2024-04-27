@@ -163,4 +163,8 @@ export class UpdatePhaseItemComponent {
   get projectPhaseId() {
     return this.form.get('projectPhaseId');
   }
+
+  get role(): any {
+    return localStorage.getItem('role');
+  }
 }

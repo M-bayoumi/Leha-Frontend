@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
         ],
         phoneNumber: [
           '',
-          [Validators.required, Validators.pattern('[0-9]{11}')],
+          [Validators.required],
         ],
         password: [
           '',
@@ -67,7 +67,7 @@ export class RegisterComponent implements OnInit {
           '',
           [Validators.required, Validators.pattern('[A-Za-z0-9]{3,}')],
         ],
-        role: ['', [Validators.required, Validators.pattern('[A-Za-z]{3,}')]],
+        role: [''],
       },
 
       { validators: this.passwordMatchValidator }
@@ -141,7 +141,7 @@ export class RegisterComponent implements OnInit {
   get role() {
     return this.userRegisterForm.get('role');
   }
-  get isAdmin(): boolean {
-    return localStorage.getItem('role') == 'Admin';
+  get isSuperAdmin(): boolean {
+    return localStorage.getItem('role') == 'SuperAdmin';
   }
 }

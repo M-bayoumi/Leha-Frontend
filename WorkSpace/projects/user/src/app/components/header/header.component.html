@@ -14,6 +14,11 @@
           "header.apply" | translate
         }}</a>
       </li>
+      <li>
+        <a routerLink="/company" routerLinkActive="active">{{
+          "header.company" | translate
+        }}</a>
+      </li>
     </ul>
   </div>
   <div class="right">
@@ -22,63 +27,117 @@
       <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
     </ul> -->
     <ul [hidden]="!isUserLogged">
-      <li [hidden]="!isAdmin">
+      <li
+        [hidden]="
+          !(role == 'SuperAdmin') &&
+          !(role == 'Admin') &&
+          !(role == 'Supervisor') &&
+          !(role == 'Engineer')
+        "
+      >
         <select class="dashBoard" onchange="window.location.href = this.value;">
           <option>
             <a routerLink="/">{{ "header.dashBoard" | translate }}</a>
           </option>
-          <option value="/companies">
+          <option
+            value="/companies"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/companies">{{ "header.companies" | translate }}</a>
           </option>
-          <option value="/members">
+          <option
+            value="/members"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/members">{{ "header.members" | translate }}</a>
           </option>
-          <option value="/speeches">
+          <option
+            value="/speeches"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/speeches">{{ "header.speeches" | translate }}</a>
           </option>
-          <option value="/clients">
+          <option
+            value="/clients"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/clients">{{ "header.clients" | translate }}</a>
           </option>
-          <option value="/homeImages">
+          <option
+            value="/homeImages"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/homeImages">{{
               "header.homeImages" | translate
             }}</a>
           </option>
-          <option value="/addresses">
+          <option
+            value="/addresses"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/addresses">{{ "header.addresses" | translate }}</a>
           </option>
 
-          <option value="/jobs">
+          <option
+            value="/jobs"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/jobs">{{ "header.jobs" | translate }}</a>
           </option>
-          <option value="/forms">
+          <option
+            value="/forms"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/forms">{{ "header.forms" | translate }}</a>
           </option>
-          <option value="/posts">
+          <option
+            value="/posts"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/posts">{{ "header.posts" | translate }}</a>
           </option>
-          <option value="/products">
+          <option
+            value="/products"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/products">{{ "header.products" | translate }}</a>
           </option>
-          <option value="/services">
+          <option
+            value="/services"
+            [hidden]="!(role == 'SuperAdmin') && !(role == 'Admin')"
+          >
             <a routerLink="/services">{{ "header.services" | translate }}</a>
           </option>
-          <option value="/projects">
+          <option
+            value="/projects"
+            [hidden]="
+              !(role == 'SuperAdmin') &&
+              !(role == 'Admin') &&
+              !(role == 'Supervisor')
+            "
+          >
             <a routerLink="/projects">{{ "header.projects" | translate }}</a>
           </option>
-          <option value="/projectPhases">
+          <option
+            value="/projectPhases"
+            [hidden]="
+              !(role == 'SuperAdmin') &&
+              !(role == 'Admin') &&
+              !(role == 'Supervisor')
+            "
+          >
             <a routerLink="/projectPhases">{{
               "header.projectPhases" | translate
             }}</a>
           </option>
-          <option value="/phaseItems">
+          <option value="/phaseItems" [hidden]="role == 'Admin'">
             <a routerLink="/phaseItems">{{
               "header.phaseItems" | translate
             }}</a>
           </option>
         </select>
       </li>
-      <li [hidden]="!isAdmin">
+      <li [hidden]="!(role == 'SuperAdmin')">
         <a routerLink="/addUser" routerLinkActive="active">{{
           "header.addUser" | translate
         }}</a>

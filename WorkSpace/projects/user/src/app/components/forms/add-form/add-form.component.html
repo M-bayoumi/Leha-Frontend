@@ -1,5 +1,5 @@
 <div class="container main py-5">
-  <h2>Apply</h2>
+  <h2>{{ "forms.add.apply" | translate }}</h2>
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="col-md-12">
       <mat-form-field appearance="outline" class="w-100">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="fullNameAr" class="form-label">fullNameAr</label>
+      <label for="fullNameAr" class="form-label">{{ "forms.add.fullNameAr" | translate }}</label>
       <input
         type="text"
         formControlName="fullNameAr"
@@ -31,7 +31,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="fullNameEn" class="form-label">fullNameEn</label>
+      <label for="fullNameEn" class="form-label">{{ "forms.add.fullNameEn" | translate }}</label>
       <input
         type="text"
         formControlName="fullNameEn"
@@ -49,7 +49,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="addressAr" class="form-label">addressAr</label>
+      <label for="addressAr" class="form-label">{{ "forms.add.addressAr" | translate }}</label>
       <input
         type="text"
         formControlName="addressAr"
@@ -67,7 +67,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="addressEn" class="form-label">addressEn</label>
+      <label for="addressEn" class="form-label">{{ "forms.add.addressEn" | translate }}</label>
       <input
         type="text"
         formControlName="addressEn"
@@ -85,7 +85,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="jobTitleAr" class="form-label">jobTitleAr</label>
+      <label for="jobTitleAr" class="form-label">{{ "forms.add.jobTitleAr" | translate }}</label>
       <input
         type="text"
         formControlName="jobTitleAr"
@@ -103,7 +103,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="jobTitleEn" class="form-label">jobTitleEn</label>
+      <label for="jobTitleEn" class="form-label">{{ "forms.add.jobTitleEn" | translate }}</label>
       <input
         type="text"
         formControlName="jobTitleEn"
@@ -121,12 +121,12 @@
     </div>
 
     <div class="col-md-12">
-      <label for="image" class="d-block fw-bold mb-2">CV</label>
+      <label for="image" class="d-block fw-bold mb-2">{{ "forms.add.cv" | translate }}</label>
       <input type="file" id="image" (change)="SelectImage($event)" />
     </div>
 
     <button [disabled]="form.invalid" type="submit" class="btn">
-      Apply Now
+      {{ "forms.add.applyNow" | translate }}
     </button>
   </form>
 </div>

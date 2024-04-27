@@ -1,0 +1,351 @@
+<div class="slider">
+  <div
+    class="slide"
+    *ngFor="let homeImage of homeImages; let i = index"
+    [class.active]="i === currentIndex"
+  >
+    <img [src]="homeImage.imageURL" alt="Slide Image" />
+  </div>
+  <button class="left" (click)="prevSlide()"></button>
+  <button class="right" (click)="nextSlide()"></button>
+</div>
+
+<div class="container">
+  <!--    About us section start    -->
+
+  <!--    About us section start    -->
+
+  <div
+    [hidden]="lang == 'ar'"
+    style="padding: 20px; margin-bottom: 15px; direction: rtl"
+    class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+    id="About-us"
+  >
+    <div
+      class="accordion col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+      style="
+        margin-bottom: 30px;
+        border-radius: 30px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      "
+    >
+      <div
+        class="accordion-item"
+        style="
+          border-radius: 20px;
+          margin-bottom: 30px;
+          box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.333);
+        "
+      >
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            style="font-size: 25px"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            About US
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body" style="font-size: 20px">
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i
+                  style="font-size: 35px"
+                  class="fa-solid fa-envelope-open-text"
+                ></i>
+                <span style="font-size: 35px">Our Message</span> <br />
+
+                Commitment to providing high-quality products and distinct items
+                at a reasonable cost. Our success reflects our commitment to
+                quality and customer satisfaction. We use the latest
+                technologies to ensure that products and services are presented
+                at their best, maintaining our motto: quality, excellence, and
+                customer service.
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 40%;
+                margin-left: 15px;
+              "
+            />
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-regular fa-eye"></i>
+                <span style="font-size: 35px">Our Vision</span> <br />
+                At Lehaa Company, we aspire to achieve leadership in every field
+                we are in, by providing distinguished services that meet our
+                customers’ aspirations and exceed their expectations, and we
+                strive to achieve sustainable growth and excellence in every
+                project we undertake.
+              </p>
+            </div>
+
+            <!-- /.col-lg-4 -->
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 30%;
+                margin-left: 15px;
+              "
+            />
+
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-regular fa-circle-dot"></i>
+
+                <span style="font-size: 35px">Our Goals</span> <br />
+                Leadership | Quality | Continuity | Expansion | Customer trust
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 20%;
+                margin-left: 15px;
+              "
+            />
+
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-solid fa-fingerprint"></i>
+                <span style="font-size: 35px">Our Values</span> <br />
+                We seek integration and commitment in everything we offer,
+                focusing on teamwork and continuous innovation to raise the
+                level of our services and meet our customers’ expectations.
+                Integrity | Excellence | Responsibility | Partnership |
+                Innovation
+              </p>
+            </div>
+
+            <!-- /.col-lg-4 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--    About us section start    -->
+
+  <div
+    [hidden]="lang == 'en'"
+    style="padding: 20px; margin-bottom: 15px; direction: rtl"
+    class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+    id="About-us"
+  >
+    <div
+      class="accordion col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+      style="
+        margin-bottom: 30px;
+        border-radius: 30px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      "
+    >
+      <div
+        class="accordion-item"
+        style="
+          border-radius: 20px;
+          margin-bottom: 30px;
+          box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.333);
+        "
+      >
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            style="font-size: 25px"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            عــن الشركـــة
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body" style="font-size: 20px">
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i
+                  style="font-size: 35px"
+                  class="fa-solid fa-envelope-open-text"
+                ></i>
+                <span style="font-size: 35px">رسالتنا</span> <br />
+
+                الإلتزام بتقديم منتجات عالية الجودة وأصناف متميزة بتكلفة معقولة.
+                فـ نجاحنا يعكس التزامنا بالجودة ورضا العملاء، نستخدم أحدث
+                التقنيات لضمان تقديم المنتجات و المنتجات بأفضل حالاتها، محافظين
+                على شعارنا: الجودة، التميز، وخدمة العميل.
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 40%;
+                margin-left: 15px;
+              "
+            />
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-regular fa-eye"></i>
+                <span style="font-size: 35px">الــرؤيــة</span> <br />
+                نتطلع في شركة لحاء إلى تحقيق ريادة في كل مجال نتواجد فيه ، من
+                خلال تقديم خدمات متميزة تلبي تطلعات عملائنا وتفوق توقعاتهم،
+                ونسعى جاهدين لتحقيق النمو المستدام والتميز في كل مشروع نقوم به.
+              </p>
+            </div>
+
+            <!-- /.col-lg-4 -->
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 30%;
+                margin-left: 15px;
+              "
+            />
+
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-regular fa-circle-dot"></i>
+
+                <span style="font-size: 35px">الأهــداف</span> <br />
+                الريــادة | الجــودة | الإستمــرارية | التــوسع | ثقــة
+                الـعـملاء
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+
+            <hr
+              style="
+                border-top: 5px solid rgb(3, 3, 34);
+                width: 20%;
+                margin-left: 15px;
+              "
+            />
+
+            <div class="row-lg-4 ldr" style="margin-left: 30px">
+              <p class="msg" style="font-size: 20px">
+                <i style="font-size: 35px" class="fa-solid fa-fingerprint"></i>
+                <span style="font-size: 35px">الـقــيــم</span> <br />
+                نسعى للتكامل والالتزام في كل ما نقدمه، مع التركيز على العمل
+                الجماعي والابتكار المستمر لرفع مستوى خدماتنا وتلبية توقعات
+                عملائنا. النزاهة | التميز | المسوؤلية | الشراكة | الإبتكار
+              </p>
+            </div>
+
+            <!-- /.col-lg-4 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--    About us section end    -->
+
+  <!--    About us section end    -->
+
+  <!--    About us section end    -->
+
+  <div class="projects my-5" [hidden]="projects.length === 0">
+    <h1 [hidden]="lang == 'ar'">Projects</h1>
+    <h1 [hidden]="lang == 'en'">المشاريع</h1>
+    <div class="boxes">
+      <div class="box" *ngFor="let project of projects">
+        <div class="image">
+          <img [src]="project.image" alt="" />
+        </div>
+        <div class="info">
+          <h2>{{ project.name }}</h2>
+          <h4>{{ project.description }}</h4>
+          <h6>{{ project.address }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services my-5" [hidden]="services.length === 0">
+    <h1 [hidden]="lang == 'ar'">Services</h1>
+    <h1 [hidden]="lang == 'en'">الخدمات</h1>
+    <div class="boxes">
+      <div class="box" *ngFor="let service of services">
+        <div class="image">
+          <img [src]="service.image" alt="" />
+        </div>
+        <div class="info">
+          <h2>{{ service.name }}</h2>
+          <h4>{{ service.description }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products my-5" [hidden]="products.length === 0">
+    <h1 [hidden]="lang == 'ar'">Products</h1>
+    <h1 [hidden]="lang == 'en'">المنتجات</h1>
+    <div class="boxes">
+      <div class="box" *ngFor="let product of products">
+        <div class="image">
+          <img [src]="product.image" alt="" />
+        </div>
+        <div class="info">
+          <h2>{{ product.name }}</h2>
+          <h4>{{ product.description }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="posts my-5" [hidden]="posts.length === 0">
+    <h1 [hidden]="lang == 'ar'">News</h1>
+    <h1 [hidden]="lang == 'en'">الاخبار</h1>
+    <div class="boxes">
+      <div class="box" *ngFor="let post of posts">
+        <div class="image">
+          <img [src]="post.image" alt="" />
+        </div>
+        <div class="info">
+          <h5>{{ post.content }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clients my-5" [hidden]="clients.length === 0">
+    <h1 [hidden]="lang == 'ar'">Clients</h1>
+    <h1 [hidden]="lang == 'en'">العملاء</h1>
+    <div class="boxes">
+      <div class="box" *ngFor="let client of clients">
+        <div class="image">
+          <img [src]="client.image" alt="" />
+        </div>
+        <div class="info">
+          <h5>{{ client.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

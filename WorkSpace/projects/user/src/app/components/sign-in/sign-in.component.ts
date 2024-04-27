@@ -59,6 +59,7 @@ export class SignInComponent implements OnInit {
           localStorage.setItem('role', userRole);
           this.toaster.success('success', 'Login Success');
           this.router.navigate(['/home']);
+          console.log(this.response)
         }
       },
       error: (e) => {

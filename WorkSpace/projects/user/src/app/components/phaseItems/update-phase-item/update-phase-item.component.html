@@ -1,14 +1,16 @@
 <div class="main p-4">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="m-3">Update</h1>
+    <h1 class="m-3">{{ "phaseItems.update.update" | translate }}</h1>
     <span mat-flat-button matDialogClose class="text-danger">
       <mat-icon>X</mat-icon>
     </span>
   </header>
   <form [formGroup]="form">
     <div class="row mt-3">
-      <div class="mb-3">
-        <label for="number" class="form-label">number</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="number" class="form-label">{{
+          "phaseItems.update.number" | translate
+        }}</label>
         <input
           type="text"
           formControlName="number"
@@ -25,8 +27,10 @@
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="nameAr" class="form-label">nameAr</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="nameAr" class="form-label">{{
+          "phaseItems.update.nameAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="nameAr"
@@ -43,9 +47,10 @@
         </div>
       </div>
 
-
-      <div class="mb-3">
-        <label for="nameEn" class="form-label">nameEn</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="nameEn" class="form-label">{{
+          "phaseItems.update.nameEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="nameEn"
@@ -62,19 +67,28 @@
         </div>
       </div>
 
-
-      <div class="mb-3">
-        <label for="acumulativePercentage" class="form-label">acumulativePercentage</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="acumulativePercentage" class="form-label">{{
+          "phaseItems.update.acumulativePercentage" | translate
+        }}</label>
         <input
           type="number"
           formControlName="acumulativePercentage"
           class="form-control"
           id="acumulativePercentage"
           name="acumulativePercentage"
-          [class.is-invalid]="acumulativePercentage?.invalid && acumulativePercentage?.touched"
-          [class.is-valid]="acumulativePercentage?.valid && acumulativePercentage?.touched"
+          [class.is-invalid]="
+            acumulativePercentage?.invalid && acumulativePercentage?.touched
+          "
+          [class.is-valid]="
+            acumulativePercentage?.valid && acumulativePercentage?.touched
+          "
         />
-        <div [hidden]="acumulativePercentage?.valid || acumulativePercentage?.untouched">
+        <div
+          [hidden]="
+            acumulativePercentage?.valid || acumulativePercentage?.untouched
+          "
+        >
           <small *ngIf="acumulativePercentage?.errors?.['required']">
             * acumulativePercentage is required.
           </small>
@@ -82,35 +96,53 @@
       </div>
 
       <div class="mb-3">
-        <label for="progressPercentage" class="form-label">progressPercentage</label>
+        <label for="progressPercentage" class="form-label">{{
+          "phaseItems.update.progressPercentage" | translate
+        }}</label>
         <input
           type="number"
           formControlName="progressPercentage"
           class="form-control"
           id="progressPercentage"
           name="progressPercentage"
-          [class.is-invalid]="progressPercentage?.invalid && progressPercentage?.touched"
-          [class.is-valid]="progressPercentage?.valid && progressPercentage?.touched"
+          [class.is-invalid]="
+            progressPercentage?.invalid && progressPercentage?.touched
+          "
+          [class.is-valid]="
+            progressPercentage?.valid && progressPercentage?.touched
+          "
         />
-        <div [hidden]="progressPercentage?.valid || progressPercentage?.untouched">
+        <div
+          [hidden]="progressPercentage?.valid || progressPercentage?.untouched"
+        >
           <small *ngIf="progressPercentage?.errors?.['required']">
             * progressPercentage is required.
           </small>
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="executionProgressAr" class="form-label">executionProgressAr</label>
+      <div class="mb-3" >
+        <label for="executionProgressAr" class="form-label">{{
+          "phaseItems.update.executionProgressAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="executionProgressAr"
           class="form-control"
           id="executionProgressAr"
           name="executionProgressAr"
-          [class.is-invalid]="executionProgressAr?.invalid && executionProgressAr?.touched"
-          [class.is-valid]="executionProgressAr?.valid && executionProgressAr?.touched"
+          [class.is-invalid]="
+            executionProgressAr?.invalid && executionProgressAr?.touched
+          "
+          [class.is-valid]="
+            executionProgressAr?.valid && executionProgressAr?.touched
+          "
         />
-        <div [hidden]="executionProgressAr?.valid || executionProgressAr?.untouched">
+        <div
+          [hidden]="
+            executionProgressAr?.valid || executionProgressAr?.untouched
+          "
+        >
           <small *ngIf="executionProgressAr?.errors?.['required']">
             * executionProgressAr is required.
           </small>
@@ -118,17 +150,27 @@
       </div>
 
       <div class="mb-3">
-        <label for="executionProgressEn" class="form-label">executionProgressEn</label>
+        <label for="executionProgressEn" class="form-label">{{
+          "phaseItems.update.executionProgressEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="executionProgressEn"
           class="form-control"
           id="executionProgressEn"
           name="executionProgressEn"
-          [class.is-invalid]="executionProgressEn?.invalid && executionProgressEn?.touched"
-          [class.is-valid]="executionProgressEn?.valid && executionProgressEn?.touched"
+          [class.is-invalid]="
+            executionProgressEn?.invalid && executionProgressEn?.touched
+          "
+          [class.is-valid]="
+            executionProgressEn?.valid && executionProgressEn?.touched
+          "
         />
-        <div [hidden]="executionProgressEn?.valid || executionProgressEn?.untouched">
+        <div
+          [hidden]="
+            executionProgressEn?.valid || executionProgressEn?.untouched
+          "
+        >
           <small *ngIf="executionProgressEn?.errors?.['required']">
             * executionProgressEn is required.
           </small>
@@ -136,7 +178,9 @@
       </div>
 
       <div class="mb-3">
-        <label for="rFIAr" class="form-label">rFIAr</label>
+        <label for="rFIAr" class="form-label">{{
+          "phaseItems.update.rfiAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="rFIAr"
@@ -153,9 +197,10 @@
         </div>
       </div>
 
-
       <div class="mb-3">
-        <label for="rFIEn" class="form-label">rFIEn</label>
+        <label for="rFIEn" class="form-label">{{
+          "phaseItems.update.rfiEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="rFIAr"
@@ -173,7 +218,9 @@
       </div>
 
       <div class="mb-3">
-        <label for="wIRAr" class="form-label">wIRAr</label>
+        <label for="wIRAr" class="form-label">{{
+          "phaseItems.update.wirAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="wIRAr"
@@ -191,7 +238,9 @@
       </div>
 
       <div class="mb-3">
-        <label for="wIREn" class="form-label">wIREn</label>
+        <label for="wIREn" class="form-label">{{
+          "phaseItems.update.wirEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="wIREn"
@@ -208,8 +257,10 @@
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="scheduleAr" class="form-label">scheduleAr</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="scheduleAr" class="form-label">{{
+          "phaseItems.update.scheduleAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="scheduleAr"
@@ -226,9 +277,10 @@
         </div>
       </div>
 
-
-      <div class="mb-3">
-        <label for="scheduleEn" class="form-label">scheduleEn</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="scheduleEn" class="form-label">{{
+          "phaseItems.update.scheduleEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="scheduleEn"
@@ -245,9 +297,10 @@
         </div>
       </div>
 
-
-      <div class="mb-3">
-        <label for="unitAr" class="form-label">unitAr</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="unitAr" class="form-label">{{
+          "phaseItems.update.unitAr" | translate
+        }}</label>
         <input
           type="text"
           formControlName="unitAr"
@@ -264,9 +317,10 @@
         </div>
       </div>
 
-
-      <div class="mb-3">
-        <label for="unitEn" class="form-label">unitEn</label>
+      <div class="mb-3" [hidden]="role == 'Engineer'">
+        <label for="unitEn" class="form-label">{{
+          "phaseItems.update.unitEn" | translate
+        }}</label>
         <input
           type="text"
           formControlName="unitEn"
@@ -283,19 +337,31 @@
         </div>
       </div>
 
-
       <div class="mb-3">
-        <label for="initialInventoryQuantities" class="form-label">initialInventoryQuantities</label>
+        <label for="initialInventoryQuantities" class="form-label">{{
+          "phaseItems.update.initialInventoryQuantities" | translate
+        }}</label>
         <input
           type="number"
           formControlName="initialInventoryQuantities"
           class="form-control"
           id="initialInventoryQuantities"
           name="initialInventoryQuantities"
-          [class.is-invalid]="initialInventoryQuantities?.invalid && initialInventoryQuantities?.touched"
-          [class.is-valid]="initialInventoryQuantities?.valid && initialInventoryQuantities?.touched"
+          [class.is-invalid]="
+            initialInventoryQuantities?.invalid &&
+            initialInventoryQuantities?.touched
+          "
+          [class.is-valid]="
+            initialInventoryQuantities?.valid &&
+            initialInventoryQuantities?.touched
+          "
         />
-        <div [hidden]="initialInventoryQuantities?.valid || initialInventoryQuantities?.untouched">
+        <div
+          [hidden]="
+            initialInventoryQuantities?.valid ||
+            initialInventoryQuantities?.untouched
+          "
+        >
           <small *ngIf="initialInventoryQuantities?.errors?.['required']">
             * initialInventoryQuantities is required.
           </small>
@@ -303,39 +369,49 @@
       </div>
 
       <div class="mb-3">
-        <label for="actualInventoryQuantities" class="form-label">actualInventoryQuantities</label>
+        <label for="actualInventoryQuantities" class="form-label">{{
+          "phaseItems.update.actualInventoryQuantities" | translate
+        }}</label>
         <input
           type="number"
           formControlName="actualInventoryQuantities"
           class="form-control"
           id="actualInventoryQuantities"
           name="actualInventoryQuantities"
-          [class.is-invalid]="actualInventoryQuantities?.invalid && actualInventoryQuantities?.touched"
-          [class.is-valid]="actualInventoryQuantities?.valid && actualInventoryQuantities?.touched"
+          [class.is-invalid]="
+            actualInventoryQuantities?.invalid &&
+            actualInventoryQuantities?.touched
+          "
+          [class.is-valid]="
+            actualInventoryQuantities?.valid &&
+            actualInventoryQuantities?.touched
+          "
         />
-        <div [hidden]="actualInventoryQuantities?.valid || actualInventoryQuantities?.untouched">
+        <div
+          [hidden]="
+            actualInventoryQuantities?.valid ||
+            actualInventoryQuantities?.untouched
+          "
+        >
           <small *ngIf="actualInventoryQuantities?.errors?.['required']">
             * actualInventoryQuantities is required.
           </small>
         </div>
       </div>
 
-
-      <div class="col-md-12">
+      <div class="col-md-12" [hidden]="role == 'Engineer'">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>ProjectPhase</mat-label>
+          <mat-label>{{ "phaseItems.update.phase" | translate }}</mat-label>
           <mat-select formControlName="projectPhaseId">
             <mat-option
               *ngFor="let projectPhase of projectPhases"
               [value]="projectPhase?.id"
             >
-            {{ projectPhase?.projectName }} - {{ projectPhase?.name }}
+              {{ projectPhase?.projectName }} - {{ projectPhase?.name }}
             </mat-option>
           </mat-select>
         </mat-form-field>
       </div>
-
-
     </div>
   </form>
 
@@ -343,12 +419,12 @@
     <div class="d-flex justify-content-center align-items-center">
       <div mat-flat-button class="btn btn-success py-1 px-5 mx-2">
         <button [disabled]="form.invalid" (click)="Update()">
-          Update
+          {{ "phaseItems.update.update" | translate }}
         </button>
       </div>
 
       <div mat-flat-button matDialogClose class="btn btn-danger py-1 px-5">
-        <button>Close</button>
+        <button>{{ "phaseItems.update.close" | translate }}</button>
       </div>
     </div>
   </footer>

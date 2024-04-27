@@ -1,12 +1,14 @@
 <div class="main container py-5">
   <div class="top">
-    <h1>All PhaseItems</h1>
-    <button class="add" (click)="Add()">Add</button>
+    <h1>{{ "phaseItems.all.allItems" | translate }}</h1>
+    <button class="add" (click)="Add()" [hidden]="(role == 'Engineer')">
+      {{ "phaseItems.all.add" | translate }}
+    </button>
 
     <div class="filter">
-      <h4>ProjectPhase</h4>
+      <h4>{{ "phaseItems.all.phase" | translate }}</h4>
       <select #projectPhaseId (change)="FilterPhaseItems(projectPhaseId)">
-        <option value="0">All</option>
+        <option value="0">{{ "phaseItems.all.all" | translate }}</option>
         <option
           [value]="projectPhase.id"
           *ngFor="let projectPhase of projectPhases"
@@ -17,9 +19,9 @@
     </div>
 
     <div class="filter">
-      <h4>Project</h4>
+      <h4>{{ "phaseItems.all.project" | translate }}</h4>
       <select #projectId (change)="FilterProjectPhases(projectId)">
-        <option value="0">All</option>
+        <option value="0">{{ "phaseItems.all.all" | translate }}</option>
         <option [value]="project.id" *ngFor="let project of projects">
           {{ project.name }}
         </option>
@@ -31,20 +33,20 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Number</th>
-          <th>Name</th>
-          <th>AcumulativePercentage</th>
-          <th>ProgressPercentage</th>
-          <th>ExecutionProgress</th>
-          <th>RFI</th>
-          <th>WIR</th>
-          <th>Schedule</th>
-          <th>Unit</th>
-          <th>InitialInventoryQuantities</th>
-          <th>ActualInventoryQuantities</th>
-          <th>PercentageLossOrExceed</th>
-          <th>PhaseName</th>
-          <th>Actions</th>
+          <th>{{ "phaseItems.all.number" | translate }}</th>
+          <th>{{ "phaseItems.all.name" | translate }}</th>
+          <th>{{ "phaseItems.all.acumulativePercentage" | translate }}</th>
+          <th>{{ "phaseItems.all.progressPercentage" | translate }}</th>
+          <th>{{ "phaseItems.all.executionProgress" | translate }}</th>
+          <th>{{ "phaseItems.all.rfi" | translate }}</th>
+          <th>{{ "phaseItems.all.wir" | translate }}</th>
+          <th>{{ "phaseItems.all.schedule" | translate }}</th>
+          <th>{{ "phaseItems.all.unit" | translate }}</th>
+          <th>{{ "phaseItems.all.initialInventoryQuantities" | translate }}</th>
+          <th>{{ "phaseItems.all.actualInventoryQuantities" | translate }}</th>
+          <th>{{ "phaseItems.all.percentageLossOrExceed" | translate }}</th>
+          <th>{{ "phaseItems.all.phaseName" | translate }}</th>
+          <th>{{ "phaseItems.all.actions" | translate }}</th>
         </tr>
       </thead>
       <tbody>
@@ -65,11 +67,13 @@
           <td>{{ phaseItem.projectPhaseName }}</td>
           <td>
             <button class="details" (click)="Details(phaseItem)">
-              Details
+              {{ "phaseItems.all.details" | translate }}
             </button>
-            <button class="update" (click)="Update(phaseItem)">Update</button>
-            <button class="delete" (click)="Delete(phaseItem.id)">
-              Delete
+            <button class="update" (click)="Update(phaseItem)">
+              {{ "phaseItems.all.update" | translate }}
+            </button>
+            <button class="delete" (click)="Delete(phaseItem.id)" [hidden]="(role == 'Engineer')">
+              {{ "phaseItems.all.delete" | translate }}
             </button>
           </td>
         </tr>
